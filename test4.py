@@ -665,7 +665,7 @@ reponse_entry4_f4.place(x=866, y=660)
 #problem_label.pack()
 
 # Create question 1
-question1_label_f4 = tkinter.Label(fenetre4, text="1- Donne la forme géométrique de chaque parcelle \n dans les champs de saisie ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question1_label_f4 = tkinter.Label(fenetre4, text="1- Donne la forme géométrique de chaque parcelle \n dans les champs de saisie", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question1_label_f4.place(x=0, y=0, relx=0.38, rely=0.69, anchor="center")
 
 entry1_0f4 = tkinter.Entry(reponse_entry1_0f4, font=("Comic sans Ms", 18, ""), width=10)
@@ -677,13 +677,13 @@ entry1_2f4.pack()
 
 # Create question 2
 #question2_label = tkinter.Label(fenetre, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-question2_label_f4 = tkinter.Label(fenetre4, text="2- Peut-on fabriquer des abreuvoirs sous frome cylindriques ?",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question2_label_f4 = tkinter.Label(fenetre4, text="2- Quelle culture produit le plus de produits en regardant \n cette image ? ",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question3_label_f4 = tkinter.Label(fenetre4, text="3- Supposons que les abreuvoirs fassent 2 mètres de haut,\n que se passera-t-il ? \n l'eau déborde - trop haut - trop bas", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question4_label_f4 = tkinter.Label(fenetre4, text="4- Combien d'animaux possède Monsieur Tamo au total ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 
-#question2_label.place(x=0, y=0, relx=0.385, rely=0.63, anchor="center"4
-#question2_label_f4.place(x=0, y=0, relx=0.43, rely=0.69, anchor="center")
+#question2_label.place(x=0, y=0, relx=0.385, rely=0.63, anchor="center")
+question2_label_f4.place(x=0, y=0, relx=0.3, rely=0.79, anchor="center")
 #question3_label_f4.place(x=0, y=0, relx=0.416, rely=0.80, anchor="center")
 #question4_label_f4.place(x=0, y=0, relx=0.405, rely=0.91, anchor="center")
 
