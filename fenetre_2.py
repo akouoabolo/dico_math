@@ -44,7 +44,7 @@ def check_answers():
         label_acess_f2.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
         label_acess_f2.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
         mon_label_img_f2.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")
-       #messagebox.showinfo("Félicitations", "Vous avez toutes les bonnes réponses ! Bien joué !")
+       #messagebox.showinfo("Félicitations", "Vous avez toutes les bonnes réponses ! Bien joué !")sé
     else:
         label_denied_f2.config(text='Oups! Vérifie \n tes réponses.', font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
         label_denied_f2.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
