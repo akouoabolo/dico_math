@@ -652,10 +652,10 @@ reponse_entry1_2f4.place(x=779, y=338)
 
 
 reponse_entry2_f4=tkinter.Label(fenetre4,text="")
-reponse_entry2_f4.place(x=930, y=500)
+reponse_entry2_f4.place(x=400, y=592)
 
 reponse_entry3_f4=tkinter.Label(fenetre4,text="")
-reponse_entry3_f4.place(x=660, y=615)
+reponse_entry3_f4.place(x=905, y=665)
 
 
 reponse_entry4_f4=tkinter.Label(fenetre4,text="")
@@ -668,33 +668,33 @@ reponse_entry4_f4.place(x=866, y=660)
 question1_label_f4 = tkinter.Label(fenetre4, text="1- Donne la forme géométrique de chaque parcelle \n dans les champs de saisie", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question1_label_f4.place(x=0, y=0, relx=0.38, rely=0.69, anchor="center")
 
-entry1_0f4 = tkinter.Entry(reponse_entry1_0f4, font=("Comic sans Ms", 18, ""), width=10)
+entry1_0f4 = tkinter.Entry(reponse_entry1_0f4, font=("Comic sans Ms", 18, ""), width=10,highlightthickness=1, highlightbackground="orange")
 entry1_0f4.pack()
-entry1_1f4 = tkinter.Entry(reponse_entry1_1f4, font=("Comic sans Ms", 18, ""), width=10)
+entry1_1f4 = tkinter.Entry(reponse_entry1_1f4, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
 entry1_1f4.pack()
-entry1_2f4 = tkinter.Entry(reponse_entry1_2f4, font=("Comic sans Ms", 18, ""), width=10)
+entry1_2f4 = tkinter.Entry(reponse_entry1_2f4, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
 entry1_2f4.pack()
 
 # Create question 2
 #question2_label = tkinter.Label(fenetre, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question2_label_f4 = tkinter.Label(fenetre4, text="2- Quelle culture produit le plus de produits en regardant \n cette image ? ",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-question3_label_f4 = tkinter.Label(fenetre4, text="3- Supposons que les abreuvoirs fassent 2 mètres de haut,\n que se passera-t-il ? \n l'eau déborde - trop haut - trop bas", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question3_label_f4 = tkinter.Label(fenetre4, text="3-  Nous souhaitons remplir les fûts d'eau.\n Quel récipient doit-on utiliser pour les remplir rapidement ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question4_label_f4 = tkinter.Label(fenetre4, text="4- Combien d'animaux possède Monsieur Tamo au total ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 
 #question2_label.place(x=0, y=0, relx=0.385, rely=0.63, anchor="center")
-question2_label_f4.place(x=0, y=0, relx=0.3, rely=0.79, anchor="center")
-#question3_label_f4.place(x=0, y=0, relx=0.416, rely=0.80, anchor="center")
+question2_label_f4.place(x=0, y=0, relx=0.41, rely=0.79, anchor="center")
+question3_label_f4.place(x=0, y=0, relx=0.42, rely=0.89, anchor="center")
 #question4_label_f4.place(x=0, y=0, relx=0.405, rely=0.91, anchor="center")
 
-entry2_f4 = tkinter.Entry(reponse_entry2_f4, font=("Comic sans Ms", 18, ""), width=6)
-#entry2_f4.pack()
+entry2_f4 = tkinter.Entry(reponse_entry2_f4, font=("Comic sans Ms", 18, ""), width=10,highlightthickness=1, highlightbackground="orange")
+entry2_f4.pack()
 
 
 
 #question2b_label.pack()
-entry3_f4 = tkinter.Entry(reponse_entry3_f4, font=("Comic sans Ms", 18, ""), width=10)
-#entry3_f4.pack()
+entry3_f4 = tkinter.Entry(reponse_entry3_f4, font=("Comic sans Ms", 18, ""),width=8,highlightthickness=1, highlightbackground="orange")
+entry3_f4.pack()
 # Create question 3
 question4_label_f4 = tkinter.Label(fenetre4, text="3- Trouvez les données parasites pour ce problème:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question4_label.place(x=0, y=0, relx=0.388, rely=0.90, anchor="center")
