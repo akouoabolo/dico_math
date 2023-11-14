@@ -339,18 +339,17 @@ btn_quitter_f2.place(x=1050, y=680)
 # Création du bouton Précédent
 def precedent():
     fenetre2.destroy()
-    subprocess.run(['python', 'test4.py'])
+    subprocess.run(['python', 'fenetre_1.py'])
 
 bouton_precedent = customtkinter.CTkButton(fenetre2, text="Précédent", command=precedent, width=3, font=("Comic Sans Ms", 16))
+bouton_precedent.pack(side=tkinter.LEFT)
 
-# Association des fonctions aux boutons
-#bouton_suivant.configure(command=afficher_fenetre2)
-#bouton_precedent.configure(command=afficher_fenetre1)       
+def suivant():
+    fenetre2.destroy()
+    subprocess.run(['python', 'fenetre_3.py'])
 
-# Placement des boutons
-#bouton_suivant.pack(side=tkinter.RIGHT)
-bouton_precedent.grid(column=0, row=10)
-
+bouton_suivant = customtkinter.CTkButton(fenetre2, text="Suivant", command=suivant, width=3, font=("Comic Sans Ms", 16))
+bouton_suivant.pack(side=tkinter.RIGHT)
 #bouton de reset
 
 reset_img_f2=ImageTk.PhotoImage(Image.open("reset_2.png"))
