@@ -37,7 +37,7 @@ def check_answers():
     answer1_f8 = entry1_f8.get().strip()
     answer2_f8 = entry2_f8.get().strip()
     answer3_f8 = entry3_f8.get().strip()
-    answer4_f8 = entry4_f8.get().strip()
+    #answer4_f8 = entry4_f8.get().strip()
     #answer5_f7 = entry5_f7.get().strip()
     #answer6_f2 = entry6_f2.get().strip()
     #answer7_f2 = entry7_f2.get().strip()
@@ -46,8 +46,8 @@ def check_answers():
     if (
         answer1_f8 == "1" and
         answer2_f8 == "1" and
-        answer3_f8 == "1" and
-        answer4_f8 == "1" 
+        answer3_f8 == "1" 
+        #answer4_f8 == "1" 
         #answer5_f7 == "1" 
         #answer6_f2 == "1" and
         #answer7_f2 == "1" and
@@ -96,13 +96,13 @@ label_denied_f8 = tkinter.Label(fenetre8, fg='#AA2822')
 #exercise_frame.place(x=300, y=200)
 
 reponse_entry1_f8=tkinter.Label(fenetre8,text="")
-reponse_entry1_f8.place(x=857, y=427)
+reponse_entry1_f8.place(x=758, y=427)
 
 reponse_entry2_f8=tkinter.Label(fenetre8,text="")
-reponse_entry2_f8.place(x=480, y=521)
+reponse_entry2_f8.place(x=498, y=521)
 
 reponse_entry3_f8=tkinter.Label(fenetre8,text="")
-reponse_entry3_f8.place(x=610, y=605)
+reponse_entry3_f8.place(x=699, y=605)
 
 
 reponse_entry4_f8=tkinter.Label(fenetre8,text="")
@@ -129,22 +129,22 @@ reponse_entry8_f8.place(x=600, y=620)
 # Create question 1
 question1_label_f8 = tkinter.Label(fenetre8, text="1- Quelle est la distance parcourue ce jour là ?:  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question1_label_f2 = tkinter.Label(fenetre6, text="1- Donne la dimension en longueur  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")#FDFBFB",justify="left")
-question1_label_f8.place(x=0, y=0, relx=0.399, rely=0.60, anchor="center")
+question1_label_f8.place(x=0, y=0, relx=0.36, rely=0.60, anchor="center")
 
 entry1_f8 = tkinter.Entry(reponse_entry1_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
 entry1_f8.pack()
 
 # Create question 2
 #question2_label = tkinter.Label(fenetre, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-question2_label_f8 = tkinter.Label(fenetre8, text="2- Quelle est Le nombre total de passagers transportés ce jour là ? : ",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-question3_label_f8 = tkinter.Label(fenetre8, text="3- Il y a 176 élèves en CE1, combien de personnes \nrestera-t-il après le premier tour ?   ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left" )
+question2_label_f8 = tkinter.Label(fenetre8, text="2- Quelle est Le nombre total de passagers \ntransportés ce jour là ? : ",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question3_label_f8 = tkinter.Label(fenetre8, text="3- Quelle serait la distance, si nous avions \n le double de la distance actuelle parcourue ?   ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left" )
 question4_label_f8 = tkinter.Label(fenetre8, text="4- Regardez les chiffres ci-dessus ! \nCombien d’élèves y a-t-il dans le cercle A ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 
 #question2_label.place(x=0, y=0, relx=0.385,
 # rely=0.63, anchor="center")
-question2_label_f8.place(x=0, y=0, relx=0.37, rely=0.70, anchor="center")
-#question3_label_f8.place(x=0, y=0, relx=0.367, rely=0.81, anchor="center")
+question2_label_f8.place(x=0, y=0, relx=0.34, rely=0.70, anchor="center")
+question3_label_f8.place(x=0, y=0, relx=0.353, rely=0.81, anchor="center")
 #question4_label_f8.place(x=0, y=0, relx=0.335, rely=0.91, anchor="center")
 
 entry2_f8 = tkinter.Entry(reponse_entry2_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
@@ -189,7 +189,7 @@ label_text_f8 = tkinter.Label(fenetre8, text="Un chauffeur qui a un bus de 25 pl
 btn_quitter_f8 = customtkinter.CTkButton(fenetre8, text="Quitter", font=("Comic Sans Ms", 16), command=fenetre8.destroy)
 
 # Position other widgets
-label_text_f8.place(x=0, y=0, relx=0.38, rely=0.15, anchor="center")
+label_text_f8.place(x=0, y=0, relx=0.41, rely=0.15, anchor="center")
 #label_text2_f2.place(x=0, y=0, relx=0.43, rely=0.56, anchor="center")
 btn_quitter_f8.place(x=1050, y=680)
 
@@ -200,14 +200,14 @@ btn_quitter_f8.place(x=1050, y=680)
 # Création du bouton Précédent
 def precedent():
     fenetre8.destroy()
-    subprocess.run(['python', 'fenetre_6.py'])
+    subprocess.run(['python', 'fenetre_8.py'])
 
 bouton_precedent = customtkinter.CTkButton(fenetre8, text="Précédent", command=precedent, width=3, font=("Comic Sans Ms", 16))
 bouton_precedent.pack(side=tkinter.LEFT)
 
 def suivant():
     fenetre8.destroy()
-    subprocess.run(['python', 'fenetre_8.py'])
+    subprocess.run(['python', 'fenetre_10.py'])
 
 bouton_suivant = customtkinter.CTkButton(fenetre8, text="Suivant", command=suivant, width=3, font=("Comic Sans Ms", 16))
 bouton_suivant.pack(side=tkinter.RIGHT)
@@ -224,22 +224,22 @@ clear_button_f8.place(x=1290, y=0)
 
 # Use the lift() method to bring labels to the front
 
-label_acess_f8.lift()
-label_denied_f8.lift()
+label_acess_f9.lift()
+label_denied_f9.lift()
 mon_label_img_f8.lift()
-mon_label_img1_f8.lift()
+mon_label_img1_f9.lift()
 
 label_text_f8.lift()
 #label_text2_f2.lift()
-btn_quitter_f8.lift()
-check_button_f8.lift()
-reponse_entry1_f8.lift()
-reponse_entry2_f8.lift()
-reponse_entry3_f8.lift()
-reponse_entry4_f8.lift()
-reponse_entry5_f8.lift()
-reponse_entry6_f8.lift()
+btn_quitter_f9.lift()
+check_button_f9.lift()
+reponse_entry1_f9.lift()
+reponse_entry2_f9.lift()
+reponse_entry3_f9.lift()
+reponse_entry4_f9.lift()
+reponse_entry5_f9.lift()
+reponse_entry6_f9.lift()
 #reponse_entry7_f7.lift()
-reponse_entry8_f8.lift()
+reponse_entry8_f9.lift()
 
 fenetre8.mainloop()

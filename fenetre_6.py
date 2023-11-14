@@ -208,7 +208,7 @@ def suivant():
     subprocess.run(['python', 'fenetre_7.py'])
 
 bouton_suivant = customtkinter.CTkButton(fenetre6, text="Suivant", command=suivant, width=3, font=("Comic Sans Ms", 16))
-bouton_suivant.pack(side=tkinter.LEFT)
+bouton_suivant.pack(side=tkinter.RIGHT)
 
 #bouton de reset
 
