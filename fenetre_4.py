@@ -140,7 +140,7 @@ question4_label_f4 = tkinter.Label(fenetre4, text="3- Trouvez les données paras
 
 entry4_f4 = tkinter.Entry(reponse_entry4_f4, font=("Comic sans Ms", 18, ""), width=10)
 #entry4_f4.pack()
-
+ 
 # Create a button to check the answers
 check_button_f4 = customtkinter.CTkButton(fenetre4, text="Vérifier les réponses", font=("Comic Sans Ms", 16), command=check_answers)
 check_button_f4.place(x=1050, y=380)

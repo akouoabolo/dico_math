@@ -6,7 +6,7 @@ import subprocess
 
 window_width = 1350
 window_height = 750
-
+ 
 # Fonctions Utiles
 def center_window(window, width, height):
     screen_width = window.winfo_screenwidth()

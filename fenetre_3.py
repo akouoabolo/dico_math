@@ -162,7 +162,7 @@ label_text_f3 = tkinter.Label(fenetre3, text="Des ouvriers du batiment ont fabri
 #btn_nouvel_info = customtkinter.CTkButton(fenetre, text="Afficher une nouvelle info", font=("Comic Sans Ms", 24))
 #message_info = tkinter.Message(fenetre, relief="sunken", width=650, font=(14))
 btn_quitter_f3 = customtkinter.CTkButton(fenetre3, text="Quitter", font=("Comic Sans Ms", 16), command=fenetre3.destroy)
-
+ 
 # Position other widgets
 label_text_f3.place(x=0, y=0, relx=0.435, rely=0.15, anchor="center")
 #label_text2_f3.place(x=0, y=0, relx=0.41, rely=0.56, anchor="center")
