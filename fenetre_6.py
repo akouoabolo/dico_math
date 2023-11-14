@@ -198,16 +198,17 @@ btn_quitter_f6.place(x=1050, y=680)
 # Création du bouton Précédent
 def precedent():
     fenetre6.destroy()
-    subprocess.run(['python', 'test4.py'])
+    subprocess.run(['python', 'fenetre_5.py'])
 
 bouton_precedent = customtkinter.CTkButton(fenetre6, text="Précédent", command=precedent, width=3, font=("Comic Sans Ms", 16))
-
-# Association des fonctions aux boutons
-#bouton_suivant.configure(command=afficher_fenetre2)
-#bouton_precedent.configure(command=afficher_fenetre1)       6
-# Placement des boutons
-#bouton_suivant.pack(side=tkinter.RIGHT)
 bouton_precedent.pack(side=tkinter.LEFT)
+
+def suivant():
+    fenetre6.destroy()
+    subprocess.run(['python', 'fenetre_7.py'])
+
+bouton_suivant = customtkinter.CTkButton(fenetre6, text="Suivant", command=suivant, width=3, font=("Comic Sans Ms", 16))
+bouton_suivant.pack(side=tkinter.LEFT)
 
 #bouton de reset
 

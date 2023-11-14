@@ -180,7 +180,7 @@ check_button_f7 = customtkinter.CTkButton(fenetre7, text="Vérifier les réponse
 check_button_f7.place(x=1050, y=380)
 
 # Create other widgets
-label_text_f7 = tkinter.Label(fenetre7, text="Classe les nombres suivant en les séoarant par des virgules ! \n ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+label_text_f7 = tkinter.Label(fenetre7, text="Classe les nombres suivant en les séparant par des virgules ! \n ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #label_text2_f2 = tkinter.Label(fenetre2, text="Chaque jour, ces animaux consomment 285 kg de nourriture. ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 #btn_nouvel_info = customtkinter.CTkButton(fenetre, text="Afficher une nouvelle info", font=("Comic Sans Ms", 24))
@@ -202,13 +202,14 @@ def precedent():
     subprocess.run(['python', 'fenetre_6.py'])
 
 bouton_precedent = customtkinter.CTkButton(fenetre7, text="Précédent", command=precedent, width=3, font=("Comic Sans Ms", 16))
-
-# Association des fonctions aux boutons
-#bouton_suivant.configure(command=afficher_fenetre2)
-#bouton_precedent.configure(command=afficher_fenetre1)       
-# Placement des boutons
-#bouton_suivant.pack(side=tkinter.RIGHT)
 bouton_precedent.pack(side=tkinter.LEFT)
+
+def suivant():
+    fenetre7.destroy()
+    subprocess.run(['python', 'fenetre_8.py'])
+
+bouton_suivant = customtkinter.CTkButton(fenetre7, text="Suivant", command=suivant, width=3, font=("Comic Sans Ms", 16))
+bouton_suivant.pack(side=tkinter.RIGHT)
 
 #bouton de reset
 
