@@ -18,10 +18,7 @@ def center_window(window, width, height):
     window.geometry(f"{width}x{height}+{x_position}+{y_position}") 
 
 def clear_entries_f8():
-    entry1_f8.delete(0, 'end')
-    entry2_f8.delete(0, 'end')
-    entry3_f8.delete(0, 'end')
-    entry4_f8.delete(0, 'end')
+
     #entry5_f7.delete(0, 'end')
     #entry6_f2.delete(0, 'end')
     #entry7_f2.delete(0, 'end')
@@ -29,40 +26,88 @@ def clear_entries_f8():
     
     label_denied_f8.place_forget() # masquer les widgets sans pour autant détruire leur context!
     mon_label_img1_f8.place_forget()
+    label_acess_f8.place_forget()
+    mon_label_img_f8.place_forget()
 #-----------------------------------------DEUXIEME FENETRE-----------------------------------------------------------------
 
 # Create a function to check the answers
 
 def check_answers():
-    answer1_f8 = entry1_f8.get().strip()
-    answer2_f8 = entry2_f8.get().strip()
-    answer3_f8 = entry3_f8.get().strip()
-    answer4_f8 = entry4_f8.get().strip()
+    
+    global niveau, propositions, proposition_entry, reponse_label, niveau_suivant_button
+    proposition = proposition_entry.get()
+    try:
+        proposition = int(proposition)
+        if proposition == propositions[niveau - 1][1]:
+            #reponse_label.config(text="Bien joué, tu as trouvé !")
+            niveau_suivant_button.config(state=tkinter.NORMAL)
+        else:
+            #reponse_label.config(text="T'as raté ! Réessayes encore.")
+            niveau_suivant_button.config(state=tkinter.DISABLED)
+    except ValueError:
+        label_denied_f8.config(text='Oups! Vérifie \n tes réponses.', font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
+        label_denied_f8.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
+        mon_label_img1_f8.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")
+        niveau_suivant_button.config(state=tkinter.DISABLED)
     #answer5_f7 = entry5_f7.get().strip()
     #answer6_f2 = entry6_f2.get().strip()
     #answer7_f2 = entry7_f2.get().strip()
     #answer8_f2 = entry7_f2.get().strip()
-
-    if (
-        answer1_f8 == "1" and
-        answer2_f8 == "1" and
-        answer3_f8 == "1" and
-        answer4_f8 == "1" 
+    proposition = int(proposition)
+    if proposition == propositions[niveau - 1][1]:
         #answer5_f7 == "1" 
         #answer6_f2 == "1" and
         #answer7_f2 == "1" and
         #answer8_f2 == "1" 
         
-    ):
+    
         label_acess_f8.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
         label_acess_f8.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
         mon_label_img_f8.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")
+        niveau_suivant_button.config(state=tkinter.NORMAL)
        #messagebox.showinfo("Félicitations", "Vous avez toutes les bonnes réponses ! Bien joué !")sé
     else:
         label_denied_f8.config(text='Oups! Vérifie \n tes réponses.', font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
         label_denied_f8.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
         mon_label_img1_f8.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")
+        niveau_suivant_button.config(state=tkinter.DISABLED)
         #messagebox.showerror("Essayez à nouveau", "Désolé, veuillez vérifier vos réponses et réessayer.")
+#nouveau
+
+
+def verifier_reponse():
+    global niveau, propositions, proposition_entry, reponse_label, niveau_suivant_button
+    proposition = proposition_entry.get()
+    try:
+        proposition = int(proposition)
+        if proposition == propositions[niveau - 1][1]:
+            reponse_label.config(text="Bien joué, tu as trouvé !")
+            niveau_suivant_button.config(state=tkinter.NORMAL)
+        else:
+            reponse_label.config(text="T'as raté ! Réessayes encore.")
+            niveau_suivant_button.config(state=tkinter.DISABLED)
+    except ValueError:
+        reponse_label.config(text="Veuillez entrer un nombre valide.")
+        niveau_suivant_button.config(state=tkinter.DISABLED)
+
+def passer_au_niveau_suivant():
+    label_denied_f8.place_forget() # masquer les widgets sans pour autant détruire leur context!
+    mon_label_img1_f8.place_forget()
+    label_acess_f8.place_forget()
+    mon_label_img_f8.place_forget()
+    global niveau, propositions, proposition_label, question_label, proposition_entry, verifier_button, reponse_label, niveau_suivant_button
+    if niveau < len(propositions):
+        niveau += 1
+        question_label.config(text=f"Niveau {niveau}:")
+        proposition_label.config(text=propositions[niveau - 1][0])
+        proposition_entry.delete(0, tkinter.END)
+        reponse_label.config(text="")
+        niveau_suivant_button.config(state=tkinter.DISABLED)
+        proposition_entry.focus_set()
+        
+    else:
+        question_label.config(text="Félicitations ! Vous avez terminé le jeu.")
+
 
 # Create the main window    
 fenetre8 =customtkinter.CTk()
@@ -127,12 +172,12 @@ reponse_entry8_f8.place(x=600, y=620)
 #problem_label.pack()
 
 # Create question 1
-question1_label_f8 = tkinter.Label(fenetre8, text="1- l'angle plat :  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+#question1_label_f8 = tkinter.Label(fenetre8, text="1- l'angle plat :  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question1_label_f2 = tkinter.Label(fenetre6, text="1- Donne la dimension en longueur  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")#FDFBFB",justify="left")
-question1_label_f8.place(x=0, y=0, relx=0.27, rely=0.60, anchor="center")
+#question1_label_f8.place(x=0, y=0, relx=0.27, rely=0.60, anchor="center")
 
-entry1_f8 = tkinter.Entry(reponse_entry1_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
-entry1_f8.pack()
+#entry1_f8 = tkinter.Entry(reponse_entry1_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
+#entry1_f8.pack()
 
 # Create question 2
 #question2_label = tkinter.Label(fenetre, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
@@ -143,25 +188,25 @@ question4_label_f8 = tkinter.Label(fenetre8, text="4- Langle aigu : ", font=("Co
 
 #question2_label.place(x=0, y=0, relx=0.385,
 # rely=0.63, anchor="center")
-question2_label_f8.place(x=0, y=0, relx=0.274, rely=0.70, anchor="center")
-question3_label_f8.place(x=0, y=0, relx=0.567, rely=0.60, anchor="center")
-question4_label_f8.place(x=0, y=0, relx=0.561, rely=0.70, anchor="center")
+#question2_label_f8.place(x=0, y=0, relx=0.274, rely=0.70, anchor="center")
+#question3_label_f8.place(x=0, y=0, relx=0.567, rely=0.60, anchor="center")
+#question4_label_f8.place(x=0, y=0, relx=0.561, rely=0.70, anchor="center")
 
-entry2_f8 = tkinter.Entry(reponse_entry2_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
-entry2_f8.pack()
+#entry2_f8 = tkinter.Entry(reponse_entry2_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
+#entry2_f8.pack()
 
 
 
 #question2b_label.pack()
-entry3_f8 = tkinter.Entry(reponse_entry3_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
-entry3_f8.pack()
+#entry3_f8 = tkinter.Entry(reponse_entry3_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
+#entry3_f8.pack()
 
 # Create question 3
 question4_labe_f7 = tkinter.Label(fenetre8, text="3- Trouvez les données parasites pour ce problème:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question4_label.place(x=0, y=0, relx=0.388, rely=0.90, anchor="center")
 
-entry4_f8 = tkinter.Entry(reponse_entry4_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
-entry4_f8.pack()
+#entry4_f8 = tkinter.Entry(reponse_entry4_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
+#entry4_f8.pack()
 
 #entry5_f7 = tkinter.Entry(reponse_entry5_f7, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
 #entry5_f7.pack()
@@ -181,7 +226,34 @@ check_button_f8.place(x=1050, y=380)
 
 # Create other widgets
 
-label_text_f8 = tkinter.Label(fenetre8, text="Observe les figures ci-dessous et entre la lettre correspondant\n à l'angle . ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+label_text_f8 = tkinter.Label(fenetre8, text="Trouve le chiffre manquant dans la suite de nombre ! ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+
+niveau = 1
+
+propositions = [
+    ("250, 240, 230, ..., 210", 220),
+    ("550, 560, 570, ..., 590", 580),
+    ("4980, 4990, 5000, ..., 5020", 5010)
+]
+
+question_label = tkinter.Label(fenetre8, text=f"Niveau {niveau}:",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question_label.place(x=0, y=0, relx=0.685, rely=0.43, anchor="center")
+
+proposition_label = tkinter.Label(fenetre8, text=propositions[niveau - 1][0], font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+proposition_label.place(x=0, y=0, relx=0.374, rely=0.46, anchor="center")
+
+proposition_entry = tkinter.Entry(fenetre8, font=("Comic sans Ms", 18, ""), width=22,highlightthickness=1, highlightbackground="orange")
+proposition_entry.place(x=0, y=0, relx=0.378, rely=0.59, anchor="center")
+proposition_entry.focus_set()
+
+#verifier_button = tkinter.Button(fenetre8, text="Vérifier", command=verifier_reponse)
+#verifier_button.place(x=0, y=0, relx=0.685, rely=0.43, anchor="center")
+
+niveau_suivant_button = tkinter.Button(fenetre8, text="Niveau suivant",  command=passer_au_niveau_suivant, font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+niveau_suivant_button.place(x=0, y=0, relx=0.685, rely=0.53, anchor="center")
+
+reponse_label = tkinter.Label(fenetre8, text="")
+reponse_label.pack()
 #label_text2_f2 = tkinter.Label(fenetre2, text="Chaque jour, ces animaux consomment 285 kg de nourriture. ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 #btn_nouvel_info = customtkinter.CTkButton(fenetre, text="Afficher une nouvelle info", font=("Comic Sans Ms", 24))
