@@ -122,7 +122,7 @@ reponse_entry4.place(x=816, y=660)
 question1_label = tkinter.Label(fenetre1, text="1- Écrivez le nombre total de plans en lettres :", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question1_label.place(x=0, y=0, relx=0.37, rely=0.55, anchor="center")
 
-entry1 = tkinter.Entry(reponse_entry1, font=("Comic sans Ms", 18, ""), width=10)
+entry1 = tkinter.Entry(reponse_entry1, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
 entry1.pack()
 
 # Create question 2
@@ -136,20 +136,20 @@ question2a_label.place(x=0, y=0, relx=0.41, rely=0.72, anchor="center")
 question2b_label.place(x=0, y=0, relx=0.39, rely=0.82, anchor="center")
 
 
-entry2 = tkinter.Entry(reponse_entry2, font=("Comic sans Ms", 18, ""), width=10)
+entry2 = tkinter.Entry(reponse_entry2, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
 entry2.pack()
 
 
 
 #question2b_label.pack()
-entry3 = tkinter.Entry(reponse_entry3, font=("Comic sans Ms", 18, ""), width=10)
+entry3 = tkinter.Entry(reponse_entry3, font=("Comic sans Ms", 18, ""), width=10,highlightthickness=1, highlightbackground="orange")
 entry3.pack()
 
 # Create question 3
 question3_label = tkinter.Label(fenetre1, text="3- Trouvez les données parasites pour ce problème:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question3_label.place(x=0, y=0, relx=0.388, rely=0.90, anchor="center")
 
-entry4 = tkinter.Entry(reponse_entry4, font=("Comic sans Ms", 18, ""), width=10)
+entry4 = tkinter.Entry(reponse_entry4, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
 entry4.pack()
 
 # Create a button to check the answers
@@ -207,7 +207,12 @@ def check_answers():
     
 
     if (
-        answer1_f2 == "1" and
+          
+          +
+          
+          
+          answer1_f2 == "1ygds "
+        and
         answer2_f2 == "1" and
         answer3_f2 == "1" and
         answer4_f2 == "1"
@@ -271,7 +276,7 @@ reponse_entry4_f2.place(x=866, y=660)
 question1_label_f2 = tkinter.Label(fenetre2, text="1- Les abreuvoirs ont la forme de quels solide ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question1_label_f2.place(x=0, y=0, relx=0.37, rely=0.63, anchor="center")
 
-entry1_f2 = tkinter.Entry(reponse_entry1_f2, font=("Comic sans Ms", 18, ""), width=10)
+entry1_f2 = tkinter.Entry(reponse_entry1_f2, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
 entry1_f2.pack()
 
 # Create question 2
@@ -286,20 +291,20 @@ question2_label_f2.place(x=0, y=0, relx=0.43, rely=0.69, anchor="center")
 question3_label_f2.place(x=0, y=0, relx=0.416, rely=0.80, anchor="center")
 question4_label_f2.place(x=0, y=0, relx=0.405, rely=0.91, anchor="center")
 
-entry2_f2 = tkinter.Entry(reponse_entry2_f2, font=("Comic sans Ms", 18, ""), width=6)
+entry2_f2 = tkinter.Entry(reponse_entry2_f2, font=("Comic sans Ms", 18, ""), width=6, highlightthickness=1, highlightbackground="orange")
 entry2_f2.pack()
 
 
 
 #question2b_label.pack()
-entry3_f2 = tkinter.Entry(reponse_entry3_f2, font=("Comic sans Ms", 18, ""), width=10)
+entry3_f2 = tkinter.Entry(reponse_entry3_f2, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
 entry3_f2.pack()
 
 # Create question 3
 question4_labe_f2l = tkinter.Label(fenetre2, text="3- Trouvez les données parasites pour ce problème:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question4_label.place(x=0, y=0, relx=0.388, rely=0.90, anchor="center")
 
-entry4_f2 = tkinter.Entry(reponse_entry4_f2, font=("Comic sans Ms", 18, ""), width=10)
+entry4_f2 = tkinter.Entry(reponse_entry4_f2, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
 entry4_f2.pack()
 
 # Create a button to check the answers
@@ -440,14 +445,14 @@ label_denied_f3 = tkinter.Label(fenetre3, fg='#AA2822')
 #exercise_frame.place(x=300, y=200)
 
 reponse_entry1_f3=tkinter.Label(fenetre3,text="")
-reponse_entry1_f3.place(x=640, y=434)
+reponse_entry1_f3.place(x=630, y=430)
 
 reponse_entry2_0f3=tkinter.Label(fenetre3,text="")
-reponse_entry2_0f3.place(x=93, y=407)
+reponse_entry2_0f3.place(x=212, y=260)
 reponse_entry2_1f3=tkinter.Label(fenetre3,text="")
-reponse_entry2_1f3.place(x=930, y=480)
+reponse_entry2_1f3.place(x=340, y=420)
 reponse_entry2_2f3=tkinter.Label(fenetre3,text="")
-reponse_entry2_2f3.place(x=930, y=488)
+reponse_entry2_2f3.place(x=75, y=558)
 
 reponse_entry3_f3=tkinter.Label(fenetre3,text="")
 reponse_entry3_f3.place(x=605, y=560)
@@ -458,16 +463,16 @@ reponse_entry4_f3.place(x=605, y=660)
 #problem_label = tkinter.Label(exercise_frame, text="Votre père souhaite créer un potager sur un espace de 195 m de long dans sa concession. Pour ce faire, il achète 60 plans d’oranger, 30 plans de manguier et 40 plans d’avocatier. Il donne 2000 frs au vendeur.\\nDe retour au domicile il s'aperçoit qu'il a oublié de prendre sa différence et vous commissionne.\\nIl veut écrire le nombre total de projets en lettres mais il se trompe.", wraplength=250)
 #problem_label.pack()
 
-entry1_f3 = tkinter.Entry(reponse_entry1_f3, font=("Comic sans Ms", 18, ""), width=10)
+entry1_f3 = tkinter.Entry(reponse_entry1_f3, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
 entry1_f3.pack()
 
-entry2_0f3 = tkinter.Entry(reponse_entry2_0f3, font=("Comic sans Ms", 18, ""), width=6)
+entry2_0f3 = tkinter.Entry(reponse_entry2_0f3, font=("Comic sans Ms", 18, ""), width=6, highlightthickness=1, highlightbackground="orange")
 entry2_0f3.pack()
 
-entry2_1f3 = tkinter.Entry(reponse_entry2_1f3, font=("Comic sans Ms", 18, ""), width=6)
+entry2_1f3 = tkinter.Entry(reponse_entry2_1f3, font=("Comic sans Ms", 18, ""), width=6, highlightthickness=1, highlightbackground="orange")
 entry2_1f3.pack()
 
-entry2_2f3 = tkinter.Entry(reponse_entry2_2f3, font=("Comic sans Ms", 18, ""), width=6)
+entry2_2f3 = tkinter.Entry(reponse_entry2_2f3, font=("Comic sans Ms", 18, ""), width=6, highlightthickness=1, highlightbackground="orange")
 entry2_2f3.pack()
 # Create question 1
 question1_label_f3 = tkinter.Label(fenetre3, text="1- Classe les dimensions de l'échelle de la plus petite \n à la plus grande:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
@@ -491,14 +496,14 @@ question4_label_f3.place(x=0, y=0, relx=0.515, rely=0.85, anchor="center")
 
 
 #question2b_label.pack()
-entry3_f3 = tkinter.Entry(reponse_entry3_f3, font=("Comic sans Ms", 18, ""), width=10)
+entry3_f3 = tkinter.Entry(reponse_entry3_f3, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
 entry3_f3.pack()
 
 # Create question 3
 question4_label_f3 = tkinter.Label(fenetre3, text="3- Trouvez les données parasites pour ce problème:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question4_label.place(x=0, y=0, relx=0.388, rely=0.90, anchor="center")
 
-entry4_f3 = tkinter.Entry(reponse_entry4_f3, font=("Comic sans Ms", 18, ""), width=10)
+entry4_f3 = tkinter.Entry(reponse_entry4_f3, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
 entry4_f3.pack()
 
 # Create a button to check the answers
