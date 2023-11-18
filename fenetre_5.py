@@ -213,7 +213,7 @@ bouton_suivant.pack(side=tkinter.RIGHT)
 #bouton_suivant.configure(command=afficher_fenetre2)
 #bouton_precedent.configure(command=afficher_fenetre1)       
 
-# Placement des boutons
+# Placement des boutoF
 #bouton_suivant.pack(side=tkinter.RIGHT)
 
 
