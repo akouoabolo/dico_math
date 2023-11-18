@@ -178,6 +178,13 @@ def precedent():
 def suivant():
     fenetre2.destroy()
     subprocess.run(['python', 'fenetre_3.py'])  
+    
+# close function
+def on_closing():
+    if messagebox.askokcancel("Quitter", "Voulez-vous vraiment quitter?"):
+        # Changer l'icône ou effectuer d'autres actions de fermeture
+        fenetre2.iconbitmap("close.ico")
+        fenetre2.destroy()
 
 fenetre2 =customtkinter.CTk()
 
@@ -189,7 +196,7 @@ fenetre2.resizable(width=False, height=False)
 
 center_window(fenetre2, window_width, window_height) #position of windows2
 # Create a Label widget and set the image as its background
-image_f2 = ImageTk.PhotoImage(Image.open("font.png"))
+image_f2 = ImageTk.PhotoImage(Image.open("font2.png"))
 
 
 img_f2 = ImageTk.PhotoImage(Image.open("succes.png"))
@@ -259,11 +266,11 @@ btn_quitter_f2.place(x=1050, y=680)"""
 
 
 # bouton suivant / précédent
-bouton_precedent = customtkinter.CTkButton(fenetre2, text="Précédent", command=precedent, width=3, font=("Comic Sans Ms", 16))
-bouton_precedent.pack(side=tkinter.LEFT)
+bouton_precedent = customtkinter.CTkButton(fenetre2, text="<<", command=precedent, width=3, font=("Comic Sans Ms", 19,"bold"))
+bouton_precedent.place(x=1049, y=698)
 
-bouton_suivant = customtkinter.CTkButton(fenetre2, text="Suivant", command=suivant, width=3, font=("Comic Sans Ms", 16))
-bouton_suivant.pack(side=tkinter.RIGHT)
+bouton_suivant = customtkinter.CTkButton(fenetre2, text=">>", command=suivant, width=3, font=("Comic Sans Ms", 19,"bold"))
+bouton_suivant.place(x=1100, y=698)
 
 #bouton de reset
 reset_img_f2=ImageTk.PhotoImage(Image.open("reset_2.png"))
