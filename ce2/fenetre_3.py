@@ -9,7 +9,7 @@ import num2words
 window_width = 1350
 window_height = 750
 
-# Fonctions Utiles
+# Fonctions Utiles / centrer la fenêtre
 def center_window(window, width, height):
     screen_width = window.winfo_screenwidth()
     screen_height = window.winfo_screenheight()
@@ -71,10 +71,6 @@ def clear_entries_f3():
     ordre_var.set("")  # Réinitialisation de la variable d'ordre
     reponse_utilisateur.delete(0, END)  # Effacer le champ de réponse
     #reponse_utilisateur_lettres.delete(0, END)  # Effacer le champ de réponse en lettres
-    resultat_label.config(text="")
-    nombres_en_lettres_label.config(text="")
-    resultat_lettres_label.config(text="")
-    resultat_final_label.config(text="")
     
     nombres.clear()
     for i in range(5):
@@ -83,42 +79,13 @@ def clear_entries_f3():
     ordre_var.set("")  # Réinitialisation de la variable d'ordre
     reponse_utilisateur.delete(0, END)  # Effacer le champ de réponse
     #reponse_utilisateur_lettres.delete(0, END)  # Effacer le champ de réponse en lettres
-    resultat_label.config(text="")
-    nombres_en_lettres_label.config(text="")
-    resultat_lettres_label.config(text="")
-    resultat_final_label.config(text="")
-    
+
     label_denied_f3.place_forget() # masquer les widgets sans pour autant détruire leur context!
     mon_label_img1_f3.place_forget()
     
     label_acess_f3.place_forget() # masquer les widgets sans pour autant détruire leur context!
     mon_label_img_f3.place_forget()
  
-# Create a function to check the answers
-#def check_answers():
-    #answer1_f2 = entry1_f2.get().strip()
-    #answer2_f2 = entry2_f2.get().strip()
-    #answer3_f2 = entry3_f2.get().strip()
-    #answer4_f2 = entry4_f2.get().strip()
-    
-
-   # if (
-        #answer1_f2 == "1" and
-        #answer2_f2 == "1" and
-        #answer3_f2 == "1" and
-        #answer4_f2 == "1"
-    #):
-        #label_acess_f2.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
-        #label_acess_f2.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
-        #mon_label_img_f2.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")
-       #messagebox.showinfo("Félicitations", "Vous avez toutes les bonnes réponses ! Bien joué !")
-   # else:
-        #label_denied_f2.config(text='Oups! Vérifie \n tes réponses.', font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
-        #label_denied_f2.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
-        #mon_label_img1_f2.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")
-        #messagebox.showerror("Essayez à nouveau", "Désolé, veuillez vérifier vos réponses et réessayer.")
-
-# Create the main window    
 
 # Les fonctions de conversion
 def precedent():
@@ -141,8 +108,6 @@ for i in range(5):
     nombres.append(random.randint(1, 100))
 nombres_label =tkinter.Label(fenetre3, text="Voici 5 nombres aléatoires : " + ", ".join(map(str, nombres)),font=("Comic sans Ms", 18, "")  ,bg="#FDFBFB",justify="left")
 nombres_label.place(x=0, y=0, relx=0.38, rely=0.13, anchor="center")
-#img = ImageTk.PhotoImage(Image.open("max27.png"))
-#img1 = ImageTk.PhotoImage(Image.open("74.png"))
 
 center_window(fenetre3, window_width, window_height) #position of windows2
 # Create a Label widget and set the image as its background
@@ -154,7 +119,6 @@ img1_f3 = ImageTk.PhotoImage(Image.open("down.png"))
 
 mon_label_img_f3=tkinter.Label(fenetre3, image=img_f3, bg="#EAAC14")
 mon_label_img1_f3=tkinter.Label(fenetre3, image=img1_f3, bg="#EAAC14")
-#mon_label_img.pack()
 
 background_label_f3 = tkinter.Label(fenetre3, image=image_f3)
 background_label_f3.place(x=0, y=0, relwidth=1, relheight=1)
@@ -176,23 +140,12 @@ reponse_utilisateur_label.place(x=0, y=0, relx=0.38, rely=0.66, anchor="center")
 reponse_utilisateur = Entry(fenetre3, font=("Comic sans Ms", 18, "")  ,bg="#FDFBFB",justify="left" ,highlightthickness=1, highlightbackground="orange")
 reponse_utilisateur.place(x=0, y=0, relx=0.38, rely=0.75, anchor="center")
 
-
-#valider_button = Button(fenetre3, text="Valider", command=verifier_ordre)
-#valider_button.pack()
-
-#relancer_button = Button(fenetre3, text="Relancer le code", command=relancer_code)
-#relancer_button.pack()
-
 resultat_label = Label(fenetre3, text="")
 resultat_label.pack()
 
 nombres_en_lettres_label = Label(fenetre3, text="")
 nombres_en_lettres_label.pack()
 
-#reponse_utilisateur_lettres_label = Label(fenetre, text="Entrez les nombres en lettres séparés par des virgules :")
-#reponse_utilisateur_lettres_label.pack()
-#reponse_utilisateur_lettres = Entry(fenetre)
-#reponse_utilisateur_lettres.pack()
 
 resultat_lettres_label = Label(fenetre3, text="")
 resultat_lettres_label.pack()
@@ -200,70 +153,9 @@ resultat_lettres_label.pack()
 resultat_final_label = Label(fenetre3, text="")
 resultat_final_label.pack()
 
-
-
-# Create a label with the problem statement
-#problem_label = tkinter.Label(exercise_frame, text="Votre père souhaite créer un potager sur un espace de 195 m de long dans sa concession. Pour ce faire, il achète 60 plans d’oranger, 30 plans de manguier et 40 plans d’avocatier. Il donne 2000 frs au vendeur.\\nDe retour au domicile il s'aperçoit qu'il a oublié de prendre sa différence et vous commissionne.\\nIl veut écrire le nombre total de projets en lettres mais il se trompe.", wraplength=250)
-#problem_label.pack()
-
-# Create question 1
-#question1_label_f2 = tkinter.Label(fenetre2, text="1- Les abreuvoirs ont la forme de quels solide ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-#question1_label_f2.place(x=0, y=0, relx=0.37, rely=0.63, anchor="center")
-
-#entry1_f2 = tkinter.Entry(reponse_entry1_f2, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
-#entry1_f2.pack()
-
-# Create question 2
-#question2_label = tkinter.Label(fenetre, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-#question2_label_f2 = tkinter.Label(fenetre2, text="2- Peut-on fabriquer des abreuvoirs sous frome cylindriques ?",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-#question3_label_f2 = tkinter.Label(fenetre2, text="3- Supposons que les abreuvoirs fassent 2 mètres de haut,\n que se passera-t-il ? \n l'eau déborde - trop haut - trop bas", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-#question4_label_f2 = tkinter.Label(fenetre2, text="4- Combien d'animaux possède Monsieur Tamo au total ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-
-
-#question2_label.place(x=0, y=0, relx=0.385, rely=0.63, anchor="center")
-#question2_label_f2.place(x=0, y=0, relx=0.43, rely=0.69, anchor="center")
-#question3_label_f2.place(x=0, y=0, relx=0.416, rely=0.80, anchor="center")
-#question4_label_f2.place(x=0, y=0, relx=0.405, rely=0.91, anchor="center")
-
-#entry2_f2 = tkinter.Entry(reponse_entry2_f2, font=("Comic sans Ms", 18, ""), width=6)
-#entry2_f2.pack()
-
-
-
-#question2b_label.pack()
-#entry3_f2 = tkinter.Entry(reponse_entry3_f2, font=("Comic sans Ms", 18, ""), width=10)
-#entry3_f2.pack()
-
-# Create question 3
-#question4_labe_f2l = tkinter.Label(fenetre2, text="3- Trouvez les données parasites pour ce problème:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-#question4_label.place(x=0, y=0, relx=0.388, rely=0.90, anchor="center")
-
-#entry4_f2 = tkinter.Entry(reponse_entry4_f2, font=("Comic sans Ms", 18, ""), width=10)
-#entry4_f2.pack()
-
-
 # Create a button to check the answers
 check_button_f3 = customtkinter.CTkButton(fenetre3, text="Vérifier les réponses", font=("Comic Sans Ms", 16), command=verifier_ordre)
 check_button_f3.place(x=1050, y=380)
-
-# Create other widgets
-#label_text_f3 = tkinter.Label(fenetre3, text="Entre les bonnes valeurs de mesure dans les champs requis : \n ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-
-#btn_quitter_f3 = customtkinter.CTkButton(fenetre3, text="Quitter", font=("Comic Sans Ms", 16), command=fenetre3.destroy)
-
-# Position other widgets
-#label_text_f3.place(x=0, y=0, relx=0.42, rely=0.15, anchor="center")
-#label_text2_f2.place(x=0, y=0, relx=0.43, rely=0.56, anchor="center")
-#btn_quitter_f3.place(x=1050, y=680)
-
-
-#config
-# Création du bouton Suivant
-#bouton_suivant = customtkinter.CTkButton(fenetre1, text="Suivant", width=3, font=("Comic Sans Ms", 16), border_spacing=0, border_width=0)
-# Création du bouton Précédent
-
-
-
 
 
 # bouton suivant / précédent
@@ -282,19 +174,13 @@ clear_button_f3 = tkinter.Button(fenetre3, command=clear_entries_f3, image=reset
 clear_button_f3.place(x=1290, y=0)
 
 
-
+# Move the label to the top
 nombres_label.lift()
 label_acess_f3.lift()
 label_denied_f3.lift()
 mon_label_img_f3.lift()
 mon_label_img1_f3.lift()
 
-#label_text_f3.lift()
-#label_text2_f2.lift()
-#btn_quitter_f3.lift()
 check_button_f3.lift()
-#reponse_entry2_f2.lift()
-#reponse_entry3_f2.lift()
-#reponse_entry4_f3.lift()
 
 fenetre3.mainloop()
