@@ -46,17 +46,17 @@ def verifier_ordre():
         label_acess_f3.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
         mon_label_img_f3.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")
         
-        resultat_label.config(text="Bravo! Vous avez correctement classé les nombres.")
+        #resultat_label.config(text="Bravo! Vous avez correctement classé les nombres.")
         nombres_en_lettres = []
         for nombre in nombres:
             nombre_en_lettres = convertir_en_lettres(nombre)
             nombres_en_lettres.append(nombre_en_lettres)
             nombres_en_lettres_label.config(text="Ces nombres en lettre sont :\n " + ", ".join(map(str, nombres_en_lettres)),font=("Comic sans Ms", 18, "")  ,bg="#FDFBFB",justify="left")
-            nombres_en_lettres_label.place(x=259, y=600)
+            nombres_en_lettres_label.place(x=258, y=600)
      
         #messagebox.showinfo("Félicitations", "Vous avez toutes les bonnes réponses ! Bien joué !")      
     else:
-        resultat_label.config(text="Dommage! Vous n'avez pas correctement classé les nombres. Recommencez s'il vous plaît.")
+        #resultat_label.config(text="Dommage! Vous n'avez pas correctement classé les nombres. Recommencez s'il vous plaît.")
         label_denied_f3.config(text='Oups! Vérifie \n tes réponses.', font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
         label_denied_f3.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
         mon_label_img1_f3.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")
@@ -90,6 +90,10 @@ def clear_entries_f3():
     
     label_denied_f3.place_forget() # masquer les widgets sans pour autant détruire leur context!
     mon_label_img1_f3.place_forget()
+    
+    label_acess_f3.place_forget() # masquer les widgets sans pour autant détruire leur context!
+    mon_label_img_f3.place_forget()
+ 
 # Create a function to check the answers
 #def check_answers():
     #answer1_f2 = entry1_f2.get().strip()
@@ -117,7 +121,13 @@ def clear_entries_f3():
 # Create the main window    
 
 # Les fonctions de conversion
-
+def precedent():
+    fenetre3.destroy()
+    subprocess.run(['python', 'fenetre_2.py'])
+    
+def suivant():
+    fenetre3.destroy()
+    subprocess.run(['python', 'fenetre_4.py'])
 
 fenetre3 =customtkinter.CTk()
 #fenetre2.iconbitmap("logo01.ico")
@@ -136,7 +146,7 @@ nombres_label.place(x=0, y=0, relx=0.38, rely=0.13, anchor="center")
 
 center_window(fenetre3, window_width, window_height) #position of windows2
 # Create a Label widget and set the image as its background
-image_f3 = ImageTk.PhotoImage(Image.open("font.png"))
+image_f3 = ImageTk.PhotoImage(Image.open("font3.png"))
 
 
 img_f3 = ImageTk.PhotoImage(Image.open("succes.png"))
@@ -153,15 +163,15 @@ label_acess_f3 = tkinter.Label(fenetre3, fg='white')
 label_denied_f3 = tkinter.Label(fenetre3, fg='#AA2822')
 
 ordre_var = StringVar()
-ordre_label = Label(fenetre3, text="Souhaitez-vous classer ces nombres par ordre \n croissant ou décroissant?",font=("Comic sans Ms", 18, "")  ,bg="#FDFBFB",justify="left")
+ordre_label = Label(fenetre3, text="Souhaitez-vous classer ces nombres par ordre \n\n croissant ou décroissant?",font=("Comic sans Ms", 18, "")  ,bg="#FDFBFB",justify="left")
 ordre_label.place(x=0, y=0, relx=0.38, rely=0.52, anchor="center")
 ordre_croissant_radio = Radiobutton(fenetre3, text="Croissant", variable=ordre_var, value="croissant",font=("Comic sans Ms", 18, "")  ,bg="#FDFBFB",justify="left")
-ordre_croissant_radio.place(x=0, y=0, relx=0.48, rely=0.546, anchor="center")
+ordre_croissant_radio.place(x=0, y=0, relx=0.48, rely=0.568, anchor="center")
 ordre_decroissant_radio = Radiobutton(fenetre3, text="Décroissant", variable=ordre_var, value="décroissant",font=("Comic sans Ms", 18, "")  ,bg="#FDFBFB",justify="left")
-ordre_decroissant_radio.place(x=0, y=0, relx=0.6, rely=0.546, anchor="center")
+ordre_decroissant_radio.place(x=0, y=0, relx=0.6, rely=0.568, anchor="center")
 
 reponse_utilisateur_label = Label(fenetre3, text="Entrez les nombres séparés par des virgules :" ,font=("Comic sans Ms", 18, "")  ,bg="#FDFBFB",justify="left")
-reponse_utilisateur_label.place(x=0, y=0, relx=0.38, rely=0.63, anchor="center")
+reponse_utilisateur_label.place(x=0, y=0, relx=0.38, rely=0.66, anchor="center")
 
 reponse_utilisateur = Entry(fenetre3, font=("Comic sans Ms", 18, "")  ,bg="#FDFBFB",justify="left" ,highlightthickness=1, highlightbackground="orange")
 reponse_utilisateur.place(x=0, y=0, relx=0.38, rely=0.75, anchor="center")
@@ -239,39 +249,37 @@ check_button_f3.place(x=1050, y=380)
 # Create other widgets
 #label_text_f3 = tkinter.Label(fenetre3, text="Entre les bonnes valeurs de mesure dans les champs requis : \n ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
-btn_quitter_f3 = customtkinter.CTkButton(fenetre3, text="Quitter", font=("Comic Sans Ms", 16), command=fenetre3.destroy)
+#btn_quitter_f3 = customtkinter.CTkButton(fenetre3, text="Quitter", font=("Comic Sans Ms", 16), command=fenetre3.destroy)
 
 # Position other widgets
 #label_text_f3.place(x=0, y=0, relx=0.42, rely=0.15, anchor="center")
 #label_text2_f2.place(x=0, y=0, relx=0.43, rely=0.56, anchor="center")
-btn_quitter_f3.place(x=1050, y=680)
+#btn_quitter_f3.place(x=1050, y=680)
 
 
 #config
 # Création du bouton Suivant
 #bouton_suivant = customtkinter.CTkButton(fenetre1, text="Suivant", width=3, font=("Comic Sans Ms", 16), border_spacing=0, border_width=0)
 # Création du bouton Précédent
-def precedent():
-    fenetre3.destroy()
-    subprocess.run(['python', 'fenetre_2.py'])
 
-bouton_precedent = customtkinter.CTkButton(fenetre3, text="Précédent", command=precedent, width=3, font=("Comic Sans Ms", 16))
-bouton_precedent.pack(side=tkinter.LEFT)
 
-def suivant():
-    fenetre3.destroy()
-    subprocess.run(['python', 'fenetre_4.py'])
 
-bouton_suivant = customtkinter.CTkButton(fenetre3, text="Suivant", command=suivant, width=3, font=("Comic Sans Ms", 16))
-bouton_suivant.pack(side=tkinter.RIGHT)
+
+
+# bouton suivant / précédent
+bouton_precedent = customtkinter.CTkButton(fenetre3, text="<<", command=precedent, width=3, font=("Comic Sans Ms", 19,"bold"))
+bouton_precedent.place(x=1049, y=698)
+
+bouton_suivant = customtkinter.CTkButton(fenetre3, text=">>", command=suivant, width=3, font=("Comic Sans Ms", 19,"bold"))
+bouton_suivant.place(x=1100, y=698)
 #bouton de reset
 
-reset_img_f2=ImageTk.PhotoImage(Image.open("reset_2.png"))
-reset_img_label_f2=tkinter.Label(fenetre3, image=reset_img_f2)
+reset_img_f3=ImageTk.PhotoImage(Image.open("reset_2.png"))
+reset_img_label_f3=tkinter.Label(fenetre3, image=reset_img_f3)
  
 # Create a button to clear the entries
-clear_button_f2 = tkinter.Button(fenetre3, command=clear_entries_f3, image=reset_img_f2, bg="white", borderwidth=0, cursor="hand2" )
-clear_button_f2.place(x=1290, y=0)
+clear_button_f3 = tkinter.Button(fenetre3, command=clear_entries_f3, image=reset_img_f3, bg="white", borderwidth=0, cursor="hand2" )
+clear_button_f3.place(x=1290, y=0)
 
 
 
@@ -283,7 +291,7 @@ mon_label_img1_f3.lift()
 
 #label_text_f3.lift()
 #label_text2_f2.lift()
-btn_quitter_f3.lift()
+#btn_quitter_f3.lift()
 check_button_f3.lift()
 #reponse_entry2_f2.lift()
 #reponse_entry3_f2.lift()
