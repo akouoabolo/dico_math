@@ -25,7 +25,7 @@ def i1():
 
 def i2():
     fenetre0.destroy()
-    subprocess.call(["python", "fenetre_6CE1.py"])
+    subprocess.call(["python", "fenetre_5CE1.py"])
 
 def i3():
     fenetre0.destroy()

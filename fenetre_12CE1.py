@@ -73,7 +73,7 @@ def precedent():
     
 def suivant():
     fenetre12.destroy()
-    subprocess.run(['python', 'fenetre_13CE1.py'])  
+    subprocess.run(['python', '0.py'])  
 
 
 # Create the main window    

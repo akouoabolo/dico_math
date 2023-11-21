@@ -21,14 +21,14 @@ def center_window(window, width, height):
 
 def i1():
       fenetre0.destroy()
-      subprocess.call(["python", "fenetre_1CE1.py"])
+      subprocess.call(["python", "fenetre_3CE1.py"])
 def i2():
       fenetre0.destroy()
-      subprocess.call(["python", "couv.py"])
+      subprocess.call(["python", "fenetre_10CE1.py"])
 
 def i3():
       fenetre0.destroy()
-      subprocess.call(["python", "fenetre_8.py"])
+      subprocess.call(["python", "fenetre_11.py"])
 
 def precedent():
     fenetre0.destroy()

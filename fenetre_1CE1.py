@@ -93,7 +93,7 @@ def center_window(window, width, height):
 # fonctions de précédent() et suivant()
 def precedent():
     fenetre1.destroy()
-    subprocess.run(['python', '0_1.py'])  
+    subprocess.run(['python', '0.py'])  
     
 def suivant():
     fenetre1.destroy()

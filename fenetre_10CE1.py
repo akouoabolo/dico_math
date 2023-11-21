@@ -140,7 +140,7 @@ reponse_entry8_f10.place(x=600, y=620)
 # Create question 1
 question1_label_f10 = tkinter.Label(fenetre10, text="1- Donnez les coordonnées géométriques des points A, B et C sur le schéma : ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question1_label_f2 = tkinter.Label(fenetre6, text="1- Donne la dimension en longueur  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")#FDFBFB",justify="left")
-question1_label_f10.place(x=0, y=0, relx=0.41, rely=0.75, anchor="center")
+question1_label_f10.place(x=0, y=0, relx=0.417, rely=0.75, anchor="center")
 
 entry1_f10 = tkinter.Entry(reponse_entry1_f10, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
 entry1_f10.pack()

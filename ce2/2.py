@@ -17,26 +17,20 @@ def center_window(window, width, height):
 
     window.geometry(f"{width}x{height}+{x_position}+{y_position}") 
 
-
+def precedent():
+    fenetre0.destroy()
+    subprocess.run(['python', '0.py'])
 
 def i1():
       fenetre0.destroy()
       subprocess.call(["python", "fenetre_7.py"])
-"""def i2():
+def i2():
       fenetre0.destroy()
-      subprocess.call(["python", "fenetre_9.py"])
+      subprocess.call(["python", "fenetre_8.py"])
 
 def i3():
       fenetre0.destroy()
-      subprocess.call(["python", "fenetre_8.py"])
-"""
-def precedent():
-    fenetre0.destroy()
-    subprocess.run(['python', '0.py'])  
-    
-def suivant():
-    fenetre0.destroy()
-    subprocess.run(['python', '2.py']) 
+      subprocess.call(["python", "fenetre_3.py"])
 
 fenetre0 =customtkinter.CTk()
 center_window(fenetre0, window_width, window_height) #position of windows2
@@ -50,11 +44,11 @@ fenetre0.resizable(width=False, height=False)
 # Create a Label widget and set the image as its background
 image_f0 = ImageTk.PhotoImage(Image.open("2.png"))
 
-"""img_f0 = ImageTk.PhotoImage(Image.open("succes.png"))
+img_f0 = ImageTk.PhotoImage(Image.open("succes.png"))
 img1_f0 = ImageTk.PhotoImage(Image.open("down.png"))
 
 mon_label_img_f0=tkinter.Label(fenetre0, image=img_f0, bg="#EAAC14")
-mon_label_img1_f8=tkinter.Label(fenetre0, image=img1_f0, bg="#EAAC14")"""
+mon_label_img1_f8=tkinter.Label(fenetre0, image=img1_f0, bg="#EAAC14")
 #mon_label_img.pack()
 background_label_f0 = tkinter.Label(fenetre0, image=image_f0)
 background_label_f0.place(x=0, y=0, relwidth=1, relheight=1)
@@ -62,21 +56,19 @@ background_label_f0.place(x=0, y=0, relwidth=1, relheight=1)
 label_acess_f0 = tkinter.Label(fenetre0, fg='white')
 label_denied_f0 = tkinter.Label(fenetre0, fg='#AA2822')
 
-# Création du bouton Suivant
-bouton_precedent = customtkinter.CTkButton(fenetre0, text="<<", command=precedent, width=3, font=("Comic Sans Ms", 19,"bold"))
-bouton_precedent.place(x=1049, y=698)
-
-bouton_suivant = customtkinter.CTkButton(fenetre0, text=">>", command=suivant, width=3, font=("Comic Sans Ms", 19,"bold"))
-bouton_suivant.place(x=1100, y=698)
-
 
 # Création du bouton avec l'image de fond
 Decouvrir1 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i1,)
 Decouvrir1.place(x=280, y=520)
-"""Decouvrir2 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i1,)
+Decouvrir2 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i2,)
 Decouvrir2.place(x=650, y=520)
-Decouvrir3 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i1,)
-Decouvrir3.place(x=1010, y=520)"""
+#Decouvrir3 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i3,)
+#Decouvrir3.place(x=1010, y=520)
+
+
+# Création du bouton Suivant
+bouton_precedent = customtkinter.CTkButton(fenetre0, text="<<", command=precedent, width=3, font=("Comic Sans Ms", 19,"bold"))
+bouton_precedent.place(x=1049, y=698)
 
 """verifi2 = tkinter.Button(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30), bg='white',command=i2)
 verifi2.place(x=960, y=740)
@@ -86,8 +78,8 @@ verifi3.place(x=1430, y=740)"""
 
 
 Decouvrir1.lift()
-"""Decouvrir2.lift()
-Decouvrir3.lift()"""
+Decouvrir2.lift()
+#Decouvrir3.lift()
 """verifi2.lift()
 verifi3.lift()"""
 fenetre0.mainloop()
