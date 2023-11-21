@@ -3,8 +3,7 @@ from tkinter import messagebox
 import customtkinter
 from PIL import ImageTk, Image
 import subprocess
-
-
+import random
 
 window_width = 1350
 window_height = 750
@@ -19,95 +18,102 @@ def center_window(window, width, height):
 
     window.geometry(f"{width}x{height}+{x_position}+{y_position}") 
 
-def clear_entries_f5():
+def clear_entries_f8():
+  
+    global random_number
+    random_number = random.randint(1, 100)
+    checkbox_var_kg.set(False)
+    checkbox_var_hg.set(False)
+    checkbox_var_dag.set(False)
+    checkbox_var_g.set(False)
+    user_input.set("")
+    result_label.set("")
+    label_instruction.config(text=f"Convertir {random_number} grammes en:", font=("Comic Sans Ms",18, ""), bg="#FDFBFB",justify="left")
+    label_instruction.place(x=300, y=80)
     
     label_denied_f5.place_forget() # masquer les widgets sans pour autant détruire leur context!
     mon_label_img1_f5.place_forget()
+    
     label_acess_f5.place_forget()
     mon_label_img_f5.place_forget()
-    
-    proposition_entry.delete(0, tkinter.END)
-
+#-----------------------------------------DEUXIEME FENETRE-----------------------------------------------------------------
 
 # Create a function to check the answers
 
 def check_answers():
-    
-    global niveau, propositions, proposition_entry, reponse_label, niveau_suivant_button
-    proposition = proposition_entry.get()
+
     try:
-        proposition = int(proposition)
-        if proposition == propositions[niveau - 1][1]:
-            #reponse_label.config(text="Bien joué, tu as trouvé !")
-            niveau_suivant_button.config(state=tkinter.NORMAL)
-        else:
-            #reponse_label.config(text="T'as raté ! Réessayes encore.")
-            niveau_suivant_button.config(state=tkinter.DISABLED)
+        user_input_value = float(user_input.get())
     except ValueError:
         label_denied_f5.config(text='Oups! Vérifie \n tes réponses.', font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
         label_denied_f5.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
-        mon_label_img1_f5.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")
-        niveau_suivant_button.config(state=tkinter.DISABLED)
+        mon_label_img1_f5.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")  
+    
 
-
-    proposition = int(proposition)
-    if proposition == propositions[niveau - 1][1]:
-  
+    if (
+ 
+    checkbox_var_kg.get() and user_input_value == random_number / 1000
+         
+    ):
         label_acess_f5.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
         label_acess_f5.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
         mon_label_img_f5.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")
-        niveau_suivant_button.config(state=tkinter.NORMAL)
-       #messagebox.showinfo("Félicitations", "Vous avez toutes les bonnes réponses ! Bien joué !")sé
-    else:
+       #messagebox.showinfo("Félicitations", "Vous avez toutes les bonnes réponses ! Bien joué !")
+ 
+    elif(
+    checkbox_var_hg.get() and user_input_value == random_number / 100
+    ):
+        label_acess_f5.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
+        label_acess_f5.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
+        mon_label_img_f5.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")     
+        
+    elif(
+    checkbox_var_hg.get() and user_input_value == random_number / 10
+    ):
+        label_acess_f5.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
+        label_acess_f5.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
+        mon_label_img_f5.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")     
+    elif(
+    checkbox_var_g.get() and user_input_value == random_number
+    ):
+        label_acess_f5.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
+        label_acess_f5.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
+        mon_label_img_f5.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")         
+    else:    
         label_denied_f5.config(text='Oups! Vérifie \n tes réponses.', font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
         label_denied_f5.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
         mon_label_img1_f5.place(x=0, y=0, relx=0.86, rely=0.72, anchor="center")
-        niveau_suivant_button.config(state=tkinter.DISABLED)
         #messagebox.showerror("Essayez à nouveau", "Désolé, veuillez vérifier vos réponses et réessayer.")
-#nouveau
-
-
-def verifier_reponse():
-    global niveau, propositions, proposition_entry, reponse_label, niveau_suivant_button
-    proposition = proposition_entry.get()
+#----------------------------------------------------------------------------------------------------------------
+"""def check_conversion():
     try:
-        proposition = int(proposition)
-        if proposition == propositions[niveau - 1][1]:
-            reponse_label.config(text="Bien joué, tu as trouvé !")
-            niveau_suivant_button.config(state=tkinter.NORMAL)
-        else:
-            reponse_label.config(text="T'as raté ! Réessayes encore.")
-            niveau_suivant_button.config(state=tkinter.DISABLED)
+        user_input_value = float(user_input.get())
     except ValueError:
-        reponse_label.config(text="Veuillez entrer un nombre valide.")
-        niveau_suivant_button.config(state=tkinter.DISABLED)
+        result_label.set("Veuillez entrer un nombre valide.")
+        return
 
-def passer_au_niveau_suivant():
-    label_denied_f5.place_forget() # masquer les widgets sans pour autant détruire leur context!
-    mon_label_img1_f5.place_forget()
-    label_acess_f5.place_forget()
-    mon_label_img_f5.place_forget()
-    global niveau, propositions, proposition_label, question_label, proposition_entry, verifier_button, reponse_label, niveau_suivant_button
-    if niveau < len(propositions):
-        niveau += 1
-        question_label.config(text=f"Niveau {niveau}:")
-        proposition_label.config(text=propositions[niveau - 1][0])
-        proposition_entry.delete(0, tkinter.END)
-        reponse_label.config(text="")
-        niveau_suivant_button.config(state=tkinter.DISABLED)
-        proposition_entry.focus_set()
-        
+    if checkbox_var_kg.get() and user_input_value == random_number / 1000:
+        result_label.set("Bravo!")
+    elif checkbox_var_hg.get() and user_input_value == random_number / 100:
+        result_label.set("Bravo!")
+    elif checkbox_var_dag.get() and user_input_value == random_number / 10:
+        result_label.set("Bravo!")
+    elif checkbox_var_g.get() and user_input_value == random_number:
+        result_label.set("Bravo!")
     else:
-        question_label.config(text="Félicitations ! Vous avez terminé le jeu.")
+        result_label.set("Dommage, essayez encore.")
+"""
+
 def precedent():
     fenetre5.destroy()
-    subprocess.run(['python', 'fenetre_4.py'])
+    subprocess.run(['python', '1.py'])
     
     
 def suivant():
     fenetre5.destroy()
-    subprocess.run(['python', 'fenetre_6.py'])
-    
+    subprocess.run(['python', 'fenetre_9.py'])
+
+#------------------------------------------------------------------------------------------------------------------
 
 # Create the main window    
 fenetre5 =customtkinter.CTk()
@@ -117,10 +123,9 @@ fenetre5.title("dico_mathématique")
 #fenetre2.geometry("1350x750")
 fenetre5.resizable(width=False, height=False)
 
-
 center_window(fenetre5, window_width, window_height) #position of windows2
 # Create a Label widget and set the image as its background
-image_f5 = ImageTk.PhotoImage(Image.open("font5.png"))
+image_f5 = ImageTk.PhotoImage(Image.open("font6.png"))
 
 img_f5 = ImageTk.PhotoImage(Image.open("succes.png"))
 img1_f5 = ImageTk.PhotoImage(Image.open("down.png"))
@@ -134,80 +139,54 @@ background_label_f5.place(x=0, y=0, relwidth=1, relheight=1)
 label_acess_f5 = tkinter.Label(fenetre5, fg='white')
 label_denied_f5 = tkinter.Label(fenetre5, fg='#AA2822')
 
-#positionement des entry
-reponse_entry1_f5=tkinter.Label(fenetre5,text="")
-reponse_entry1_f5.place(x=450, y=429)
 
-reponse_entry2_f5=tkinter.Label(fenetre5,text="")
-reponse_entry2_f5.place(x=870, y=429)
+# Générer un nombre aléatoire entre 1 et 100
+random_number = random.randint(1, 100)
 
-reponse_entry3_f5=tkinter.Label(fenetre5,text="")
-reponse_entry3_f5.place(x=470, y=510)
+# Variables pour stocker les entrées utilisateur
+user_input = tkinter.StringVar()
+result_label = tkinter.StringVar()
+
+# Créer les éléments d'interface utilisateur
+label_instruction = tkinter.Label(
+    fenetre5, text=f"Convertir {random_number} grammes en:",  font=("Comic Sans Ms",18, ""), bg="#FDFBFB",justify="left")
+label_instruction.place(x=300, y=80)
+
+checkbox_var_kg = tkinter.BooleanVar()
+checkbox_var_hg = tkinter.BooleanVar()
+checkbox_var_dag = tkinter.BooleanVar()
+checkbox_var_g = tkinter.BooleanVar()
+
+checkbox_kg = tkinter.Checkbutton(fenetre5, text="Kilogramme", variable=checkbox_var_kg, font=("Comic Sans Ms",18, ""), bg="#FDFBFB",justify="left")
+checkbox_hg = tkinter.Checkbutton(fenetre5, text="Hectogramme", variable=checkbox_var_hg,font=("Comic Sans Ms",18, ""), bg="#FDFBFB",justify="left")
+checkbox_dag = tkinter.Checkbutton(fenetre5, text="Decagramme", variable=checkbox_var_dag, font=("Comic Sans Ms",18, ""), bg="#FDFBFB",justify="left")
+checkbox_g = tkinter.Checkbutton(fenetre5, text="Gramme", variable=checkbox_var_g, font=("Comic Sans Ms",18, ""), bg="#FDFBFB",justify="left")
+
+label_user_input = tkinter.Label(fenetre5, text="Entrez la conversion:", font=("Comic Sans Ms",18, ""), bg="#FDFBFB",justify="left")
+entry_user_input = tkinter.Entry(fenetre5, textvariable=user_input, font=("Comic Sans Ms",18, ""), bg="#FDFBFB",justify="left",highlightthickness=1, highlightbackground="orange")
+
+#label_result = tkinter.Label(fenetre5   , textvariable=result_label)
 
 
-reponse_entry4_f5=tkinter.Label(fenetre5,text="")
-reponse_entry4_f5.place(x=695, y=680)
+#-------------------------------------------------------------------------
+# Placer les éléments dans la grille
 
+checkbox_kg.place(x="180", y="400")
+checkbox_hg.place(x="400", y="400")
+checkbox_dag.place(x="630", y="400")
+checkbox_g.place(x="830", y="400")
 
-reponse_entry5_f5=tkinter.Label(fenetre5,text="")
-reponse_entry5_f5.place(x=866, y=650)
+label_user_input.place(x="310", y="500",)
+entry_user_input.place(x="560", y="500",)
 
+#label_result.pack()
 
-reponse_entry6_f5=tkinter.Label(fenetre5,text="")
-reponse_entry6_f5.place(x=866, y=650)
-
-
-reponse_entry7_f5=tkinter.Label(fenetre5,text="")
-reponse_entry7_f5.place(x=530, y=570)
-
-reponse_entry8_f5=tkinter.Label(fenetre5,text="")
-reponse_entry8_f5.place(x=600, y=620)
-
-# Create a label with the problem statement
-question2_label_f5 = tkinter.Label(fenetre5, text="2- L'angle droit : ",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-question3_label_f5 = tkinter.Label(fenetre5, text="3- L'angle obtus :", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left" )
-question4_label_f5 = tkinter.Label(fenetre5, text="4- Langle aigu : ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-
-# Create question 3
+# Create question 
 question4_labe_f5 = tkinter.Label(fenetre5, text="3- Trouvez les données parasites pour ce problème:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-
 
 # Create a button to check the answers
 check_button_f5 = customtkinter.CTkButton(fenetre5, text="Vérifier les réponses", font=("Comic Sans Ms", 16), command=check_answers)
 check_button_f5.place(x=1050, y=380)
-
-# Create other widgets
-
-label_text_f5 = tkinter.Label(fenetre5, text="Trouve le chiffre manquant dans la suite de nombres ! ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-
-niveau = 1
-
-propositions = [  
-              
-    ("250, 240, 230, ..., 210", 220),
-    ("550, 560, 570, ..., 590", 580),
-    ("4980, 4990, 5000, ..., 5020", 5010)
-]
-
-question_label = tkinter.Label(fenetre5, text=f"Niveau: {niveau}",font=("Comic sans Ms", 18, "bold"),bg="#FDFBFB",justify="left")
-question_label.place(x=0, y=0, relx=0.685, rely=0.43, anchor="center")
-
-proposition_label = tkinter.Label(fenetre5, text=propositions[niveau - 1][0], font=("Comic sans Ms", 18, "bold"),bg="#FDFBFB",justify="left")
-proposition_label.place(x=0, y=0, relx=0.484, rely=0.46, anchor="center")
-
-proposition_entry = tkinter.Entry(fenetre5, font=("Comic sans Ms", 18, ""), width=5,highlightthickness=1, highlightbackground="orange")
-proposition_entry.place(x=0, y=0, relx=0.399, rely=0.58, anchor="center")
-proposition_entry.focus_set()
-
-niveau_suivant_button = tkinter.Button(fenetre5, text="Niveau suivant",  command=passer_au_niveau_suivant, font=("Comic sans Ms", 15),bg="#3BABE4",fg="white",justify="left", borderwidth=4,relief="ridge", cursor="hand2")
-niveau_suivant_button.place(x=0, y=0, relx=0.685, rely=0.51, anchor="center")
-
-reponse_label = tkinter.Label(fenetre5, text="")
-reponse_label.pack()
-
-# Position other widgets
-label_text_f5.place(x=0, y=0, relx=0.43, rely=0.15, anchor="center")
-
 
 # bouton suivant / précédent
 bouton_precedent = customtkinter.CTkButton(fenetre5, text="<<", command=precedent, width=3, font=("Comic Sans Ms", 19,"bold"))
@@ -222,7 +201,7 @@ reset_img_f5=ImageTk.PhotoImage(Image.open("reset_2.png"))
 reset_img_label_f5=tkinter.Label(fenetre5, image=reset_img_f5)
  
 # Create a button to clear the entries
-clear_button_f5 = tkinter.Button(fenetre5, command=clear_entries_f5, image=reset_img_f5, bg="white", borderwidth=0, cursor="hand2" )
+clear_button_f5 = tkinter.Button(fenetre5, command=clear_entries_f8, image=reset_img_f5, bg="white", borderwidth=0, cursor="hand2" )
 clear_button_f5.place(x=1290, y=0)
 
 
@@ -233,15 +212,6 @@ label_denied_f5.lift()
 mon_label_img_f5.lift()
 mon_label_img1_f5.lift()
 
-label_text_f5.lift()
 check_button_f5.lift()
-reponse_entry1_f5.lift()
-reponse_entry2_f5.lift()
-reponse_entry3_f5.lift()
-reponse_entry4_f5.lift()
-reponse_entry5_f5.lift()
-reponse_entry6_f5.lift()
-
-reponse_entry8_f5.lift()
 
 fenetre5.mainloop()

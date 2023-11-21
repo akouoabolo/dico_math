@@ -21,7 +21,7 @@ def clear_entries_f8():
     entry1_f8.delete(0, 'end')
     entry2_f8.delete(0, 'end')
     entry3_f8.delete(0, 'end')
-    entry4_f8.delete(0, 'end')
+    #entry4_f8.delete(0, 'end')
 
     
     label_denied_f8.place_forget() # masquer les widgets sans pour autant détruire leur context!
@@ -37,13 +37,13 @@ def check_answers():
     answer1_f8 = entry1_f8.get().strip()
     answer2_f8 = entry2_f8.get().strip()
     answer3_f8 = entry3_f8.get().strip()
-    answer4_f8 = entry4_f8.get().strip()
+   
 
     if (
         answer1_f8 == "1" and
         answer2_f8 == "1" and
-        answer3_f8 == "1" and
-        answer4_f8 == "1" 
+        answer3_f8 == "1" 
+       # answer4_f8 == "1" 
         #answer5_f7 == "1" 
         #answer6_f2 == "1" and
         #answer7_f2 == "1" and
@@ -82,7 +82,7 @@ fenetre8.resizable(width=False, height=False)
 
 center_window(fenetre8, window_width, window_height) #position of windows2
 # Create a Label widget and set the image as its background
-image_f8 = ImageTk.PhotoImage(Image.open("font8.png"))
+image_f8 = ImageTk.PhotoImage(Image.open("font9.png"))
 
 img_f8 = ImageTk.PhotoImage(Image.open("succes.png"))
 img1_f8 = ImageTk.PhotoImage(Image.open("down.png"))
@@ -98,22 +98,22 @@ label_denied_f8 = tkinter.Label(fenetre8, fg='#AA2822')
 
 #position des entrer
 reponse_entry1_f8=tkinter.Label(fenetre8,text="")
-reponse_entry1_f8.place(x=250, y=439)
+reponse_entry1_f8.place(x=205, y=439)
 
 reponse_entry2_f8=tkinter.Label(fenetre8,text="")
-reponse_entry2_f8.place(x=742, y=445)
+reponse_entry2_f8.place(x=512, y=445)
 
 reponse_entry3_f8=tkinter.Label(fenetre8,text="")
-reponse_entry3_f8.place(x=330, y=640)
+reponse_entry3_f8.place(x=800, y=445)
 
 
-reponse_entry4_f8=tkinter.Label(fenetre8,text="")
-reponse_entry4_f8.place(x=695, y=640)
+"""reponse_entry4_f8=tkinter.Label(fenetre8,text="")
+reponse_entry4_f8.place(x=695, y=640)"""
 
 # Create question 1
 Lable1_label_f8 = tkinter.Label(fenetre8, text="FigureA  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question1_label_f2 = tkinter.Label(fenetre6, text="1- Donne la dimension en longueur  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")#FDFBFB",justify="left")
-Lable1_label_f8.place(x=0, y=0, relx=0.25, rely=0.55, anchor="center")
+Lable1_label_f8.place(x=0, y=0, relx=0.22, rely=0.55, anchor="center")
 
 entry1_f8 = tkinter.Entry(reponse_entry1_f8, font=("Comic sans Ms", 18, ""), width=10,highlightthickness=1, highlightbackground="orange")
 entry1_f8.pack()
@@ -121,15 +121,15 @@ entry1_f8.pack()
 # Create question 2
 #question2_label = tkinter.Label(fenetre, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 Label2_label_f8 = tkinter.Label(fenetre8, text="FigureB  ",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-question3_label_f8 = tkinter.Label(fenetre8, text="\n\n1- Entre dans les champs la nature des figures géométriques", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left" )
-question4_label_f8 = tkinter.Label(fenetre8, text="2- Donne le périmètre : \n\nFigureA: \t\t\t FigureB:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+#question3_label_f8 = tkinter.Label(fenetre8, text="\n\n1- Entre dans les champs la nature des figures géométriques", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left" )
+Label3_label_f8 = tkinter.Label(fenetre8, text="FigureC", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 
 #question2_label.place(x=0, y=0, relx=0.385,
 # rely=0.63, anchor="center")
-Label2_label_f8.place(x=0, y=0, relx=0.61, rely=0.55, anchor="center")
-question3_label_f8.place(x=0, y=0, relx=0.4, rely=0.68, anchor="center")
-question4_label_f8.place(x=0, y=0, relx=0.323, rely=0.84, anchor="center")
+Label2_label_f8.place(x=0, y=0, relx=0.438, rely=0.55, anchor="center")
+#question3_label_f8.place(x=0, y=0, relx=0.38, rely=0.68, anchor="center")
+Label3_label_f8.place(x=0, y=0, relx=0.65, rely=0.55, anchor="center")
 
 entry2_f8 = tkinter.Entry(reponse_entry2_f8, font=("Comic sans Ms", 18, ""), width=10,highlightthickness=1, highlightbackground="orange")
 entry2_f8.pack()
@@ -137,11 +137,11 @@ entry2_f8.pack()
 
 
 #question2b_label.pack()
-entry3_f8 = tkinter.Entry(reponse_entry3_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
+entry3_f8 = tkinter.Entry(reponse_entry3_f8, font=("Comic sans Ms", 18, ""), width=10,highlightthickness=1, highlightbackground="orange")
 entry3_f8.pack()
 
-entry4_f8 = tkinter.Entry(reponse_entry4_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
-entry4_f8.pack()
+"""entry4_f8 = tkinter.Entry(reponse_entry4_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
+entry4_f8.pack()"""
 
 # Create a button to check the answers
 check_button_f8 = customtkinter.CTkButton(fenetre8, text="Vérifier les réponses", font=("Comic Sans Ms", 16), command=check_answers)
@@ -149,7 +149,7 @@ check_button_f8.place(x=1050, y=380)
 
 # Create other widgets
 
-label_text_f8 = tkinter.Label(fenetre8, text="Observe les figures ci-dessous et répond au questionnaire\n . ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+label_text_f8 = tkinter.Label(fenetre8, text="Observe les figures ci-dessous et entre la fraction correspondante\n . ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 #btn_quitter_f8 = customtkinter.CTkButton(fenetre8, text="Quitter", font=("Comic Sans Ms", 16), command=fenetre8.destroy)
 

@@ -17,28 +17,23 @@ def center_window(window, width, height):
 
     window.geometry(f"{width}x{height}+{x_position}+{y_position}") 
 
-
+def precedent():
+    fenetre0.destroy()
+    subprocess.run(['python', '0.py'])
+def suivant():
+    fenetre0.destroy()
+    subprocess.run(['python', '2.py'])
 
 def i1():
       fenetre0.destroy()
-      subprocess.call(["python", "fenetre_7.py"])
+      subprocess.call(["python", "fenetre_4.py"])
 def i2():
       fenetre0.destroy()
-      subprocess.call(["python", "fenetre_10.py"])
+      subprocess.call(["python", "fenetre_5.py"])
 
 def i3():
       fenetre0.destroy()
-      subprocess.call(["python", "fenetre_8.py"])
-      
-
-def precedent():
-    fenetre0.destroy()
-    subprocess.run(['python', '0.py'])  
-    
-def suivant():
-    fenetre0.destroy()
-    subprocess.run(['python', '1.py'])  
-
+      subprocess.call(["python", "fenetre_6.py"])
 
 fenetre0 =customtkinter.CTk()
 center_window(fenetre0, window_width, window_height) #position of windows2
@@ -68,10 +63,11 @@ label_denied_f0 = tkinter.Label(fenetre0, fg='#AA2822')
 # Création du bouton avec l'image de fond
 Decouvrir1 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i1,)
 Decouvrir1.place(x=280, y=520)
-Decouvrir2 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i1,)
+Decouvrir2 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i2,)
 Decouvrir2.place(x=650, y=520)
-Decouvrir3 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i1,)
+Decouvrir3 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i3,)
 Decouvrir3.place(x=1010, y=520)
+
 
 # Création du bouton Suivant
 bouton_precedent = customtkinter.CTkButton(fenetre0, text="<<", command=precedent, width=3, font=("Comic Sans Ms", 19,"bold"))
@@ -79,7 +75,6 @@ bouton_precedent.place(x=1049, y=698)
 
 bouton_suivant = customtkinter.CTkButton(fenetre0, text=">>", command=suivant, width=3, font=("Comic Sans Ms", 19,"bold"))
 bouton_suivant.place(x=1100, y=698)
-
 
 """verifi2 = tkinter.Button(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30), bg='white',command=i2)
 verifi2.place(x=960, y=740)

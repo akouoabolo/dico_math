@@ -68,7 +68,7 @@ def precedent():
     
 def suivant():
     fenetre9.destroy()
-    subprocess.run(['python', '0.py'])
+    subprocess.run(['python', 'fenetre_9.py'])
     
     #------------------------------------------------------------------------
 # Create the main window    

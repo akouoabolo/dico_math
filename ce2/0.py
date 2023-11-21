@@ -18,7 +18,7 @@ def center_window(window, width, height):
     window.geometry(f"{width}x{height}+{x_position}+{y_position}") 
 def precedent():
     fenetre0.destroy()
-    subprocess.run(['python', '0.py'])  
+    subprocess.run(['python', 'couv.py'])  
     
 def suivant():
     fenetre0.destroy()
@@ -27,14 +27,14 @@ def suivant():
 
 def i1():
       fenetre0.destroy()
-      subprocess.call(["python", "fenetre_7.py"])
+      subprocess.call(["python", "fenetre_1.py"])
 def i2():
       fenetre0.destroy()
-      subprocess.call(["python", "fenetre_9.py"])
+      subprocess.call(["python", "fenetre_2.py"])
 
 def i3():
       fenetre0.destroy()
-      subprocess.call(["python", "fenetre_8.py"])
+      subprocess.call(["python", "fenetre_3.py"])
 
 fenetre0 =customtkinter.CTk()
 center_window(fenetre0, window_width, window_height) #position of windows2
@@ -46,7 +46,7 @@ fenetre0.resizable(width=False, height=False)
 #screen.geometry("1920x1080")
 
 # Create a Label widget and set the image as its background
-image_f0 = ImageTk.PhotoImage(Image.open("7.png"))
+image_f0 = ImageTk.PhotoImage(Image.open("0.png"))
 
 img_f0 = ImageTk.PhotoImage(Image.open("succes.png"))
 img1_f0 = ImageTk.PhotoImage(Image.open("down.png"))
@@ -64,9 +64,9 @@ label_denied_f0 = tkinter.Label(fenetre0, fg='#AA2822')
 # Création du bouton avec l'image de fond
 Decouvrir1 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i1,)
 Decouvrir1.place(x=280, y=520)
-Decouvrir2 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i1,)
+Decouvrir2 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i2,)
 Decouvrir2.place(x=650, y=520)
-Decouvrir3 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i1,)
+Decouvrir3 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i3,)
 Decouvrir3.place(x=1010, y=520)
 
 
