@@ -21,10 +21,10 @@ def center_window(window, width, height):
 
 def i1():
       fenetre0.destroy()
-      subprocess.call(["python", "fenetre_7.py"])
+      subprocess.call(["python", "fenetre_1CE1.py"])
 def i2():
       fenetre0.destroy()
-      subprocess.call(["python", "fenetre_9.py"])
+      subprocess.call(["python", "couv.py"])
 
 def i3():
       fenetre0.destroy()
@@ -71,11 +71,11 @@ bouton_suivant.place(x=1100, y=698)
 
 
 # Création du bouton avec l'image de fond
-Decouvrir1 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i1,)
+Decouvrir1 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i1)
 Decouvrir1.place(x=280, y=520)
-Decouvrir2 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i1,)
+Decouvrir2 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i2)
 Decouvrir2.place(x=650, y=520)
-Decouvrir3 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i1,)
+Decouvrir3 = customtkinter.CTkButton(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30),command=i3)
 Decouvrir3.place(x=1010, y=520)
 
 """verifi2 = tkinter.Button(fenetre0,text="Découvrir ", font=('Lucida Handwriting', 30), bg='white',command=i2)

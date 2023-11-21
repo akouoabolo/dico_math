@@ -34,7 +34,7 @@ fenetre0.resizable(width=False, height=False)
 #screen.geometry("1920x1080")
 
 # Create a Label widget and set the image as its background
-image_f0 = ImageTk.PhotoImage(Image.open("00.png"))
+image_f0 = ImageTk.PhotoImage(Image.open("couv.png"))
 
 
 

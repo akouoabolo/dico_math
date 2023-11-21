@@ -17,18 +17,19 @@ def center_window(window, width, height):
 
     window.geometry(f"{width}x{height}+{x_position}+{y_position}") 
 
-def clear_entries_f2():
+def clear_entries_f6():
     entry1_f6.delete(0, 'end')
     entry2_f6.delete(0, 'end')
     entry3_f6.delete(0, 'end')
     entry4_f6.delete(0, 'end')
-    entry5_f6.delete(0, 'end')
-    entry6_f6.delete(0, 'end')
-    entry7_f6.delete(0, 'end')
-    entry8_f6.delete(0, 'end')
+    #entry5_f2.delete(0, 'end')
+    #entry6_f2.delete(0, 'end')
+    #entry7_f2.delete(0, 'end')
+    #entry8_f2.delete(0, 'end')
     
     label_denied_f6.place_forget() # masquer les widgets sans pour autant détruire leur context!
     mon_label_img1_f6.place_forget()
+    
     label_acess_f6.place_forget() # masquer les widgets sans pour autant détruire leur context!
     mon_label_img_f6.place_forget()
 #-----------------------------------------DEUXIEME FENETRE-----------------------------------------------------------------
@@ -39,20 +40,20 @@ def check_answers():
     answer2_f6 = entry2_f6.get().strip()
     answer3_f6 = entry3_f6.get().strip()
     answer4_f6 = entry4_f6.get().strip()
-    answer5_f6 = entry5_f6.get().strip()
-    answer6_f6 = entry6_f6.get().strip()
-    answer7_f6 = entry7_f6.get().strip()
-    answer8_f6 = entry7_f6.get().strip()
+    #answer5_f2 = entry5_f2.get().strip()
+    #answer6_f2 = entry6_f2.get().strip()
+    #answer7_f2 = entry7_f2.get().strip()
+    #answer8_f2 = entry7_f2.get().strip()
 
     if (
         answer1_f6 == "1" and
         answer2_f6 == "1" and
         answer3_f6 == "1" and
-        answer4_f6 == "1" and
-        answer5_f6 == "1" and
-        answer6_f6 == "1" and
-        answer7_f6 == "1" and
-        answer8_f6 == "1" 
+        answer4_f6 == "1" 
+        #answer5_f2 == "1" and
+        #answer6_f2 == "1" and
+        #answer7_f2 == "1" and
+        #answer8_f2 == "1" 
         
     ):
         label_acess_f6.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
@@ -90,7 +91,7 @@ img1_f6 = ImageTk.PhotoImage(Image.open("74.png"))
 
 center_window(fenetre6, window_width, window_height) #position of windows2
 # Create a Label widget and set the image as its background
-image_f6 = ImageTk.PhotoImage(Image.open("back_5.png"))
+image_f6= ImageTk.PhotoImage(Image.open("font6.png"))
 
 img_f6 = ImageTk.PhotoImage(Image.open("max27.png"))
 img1_f6 = ImageTk.PhotoImage(Image.open("74.png"))
@@ -109,21 +110,20 @@ label_denied_f6 = tkinter.Label(fenetre6, fg='#AA2822')
 #exercise_frame.place(x=300, y=200)
 
 reponse_entry1_f6=tkinter.Label(fenetre6,text="")
-reponse_entry1_f6.place(x=348, y=434)
+reponse_entry1_f6.place(x=889, y=427)
 
 reponse_entry2_f6=tkinter.Label(fenetre6,text="")
-reponse_entry2_f6.place(x=560, y=434)
+reponse_entry2_f6.place(x=384, y=559)
 
 reponse_entry3_f6=tkinter.Label(fenetre6,text="")
-reponse_entry3_f6.place(x=793, y=434)
-
-
+reponse_entry3_f6.place(x=724, y=559)
+7
 reponse_entry4_f6=tkinter.Label(fenetre6,text="")
-reponse_entry4_f6.place(x=210, y=470)
+reponse_entry4_f6.place(x=866, y=650)
 
 
 reponse_entry5_f6=tkinter.Label(fenetre6,text="")
-reponse_entry5_f6.place(x=460, y=470)
+reponse_entry5_f6.place(x=460, y=450)
 
 
 reponse_entry6_f6=tkinter.Label(fenetre6,text="")
@@ -140,70 +140,70 @@ reponse_entry8_f6.place(x=600, y=620)
 #problem_label.pack()
 
 # Create question 1
-question1_label_f6 = tkinter.Label(fenetre6, text="1- Il a vendu [______] tenues + [______] tableaux + [______] perles + \n [______]  bracelets + _____ masques =  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")#FDFBFB",justify="left")
-question1_label_f6.place(x=0, y=0, relx=0.45, rely=0.63, anchor="center")
+question1_label_f6 = tkinter.Label(fenetre6, text="1- Quel est le nom de la forme géométrique de ce tableau ?  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+#question1_label_f2 = tkinter.Label(fenetre6, text="1- Donne la dimension en longueur  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")#FDFBFB",justify="left")
+question1_label_f6.place(x=0, y=0, relx=0.42, rely=0.60, anchor="center")
 
-entry1_f6 = tkinter.Entry(reponse_entry1_f6, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
+entry1_f6 = tkinter.Entry(reponse_entry1_f6, font=("Comic sans Ms", 18, ""), width=10,highlightthickness=1, highlightbackground="orange")
 entry1_f6.pack()
 
 # Create question 2
 #question2_label = tkinter.Label(fenetre, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-question2_label_f6 = tkinter.Label(fenetre6, text="2- Quel est le nombre total des masques ? \n Ecris ce nombre en lettre :",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-question3_label_f6 = tkinter.Label(fenetre6, text="3- Quel est l'objet le plus vendu ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left" )
-question4_label_f6 = tkinter.Label(fenetre6, text="4- Combien d'animaux possède Monsieur Tamo au total ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question2_label_f6 = tkinter.Label(fenetre6, text="2- Quelles sont ses dimensions en longueur et en largeur ? \n Ecris ces nombres en lettre:\n La longueur: \t\t la largeur:",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question3_label_f6 = tkinter.Label(fenetre6, text="3- Pour entouré le musée, Mbarga pense qu'il faut utiliser l'aire et \n Kambouo pense au périmetre. lequel des deux a raison ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left" )
+#question4_label_f2 = tkinter.Label(fenetre6, text="4- Pour entouré le musée, Mbarga pense qu'il faut utiliser l'aire et \n Kambouo pense au périmetre. lequel des deux a raison?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 
 #question2_label.place(x=0, y=0, relx=0.385, rely=0.63, anchor="center")
-question2_label_f6.place(x=0, y=0, relx=0.33, rely=0.76, anchor="center")
-question3_label_f6.place(x=0, y=0, relx=0.296, rely=0.86, anchor="center")
+question2_label_f6.place(x=0, y=0, relx=0.414, rely=0.73, anchor="center")
+question3_label_f6.place(x=0, y=0, relx=0.444, rely=0.87, anchor="center")
 #question4_label_f2.place(x=0, y=0, relx=0.405, rely=0.91, anchor="center")
 
-entry2_f6 = tkinter.Entry(reponse_entry2_f6, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
+entry2_f6 = tkinter.Entry(reponse_entry2_f6, font=("Comic sans Ms", 18, ""), width=13,highlightthickness=1, highlightbackground="orange")
 entry2_f6.pack()
 
 
 
 #question2b_label.pack()
-entry3_f6 = tkinter.Entry(reponse_entry3_f6, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
+entry3_f6 = tkinter.Entry(reponse_entry3_f6, font=("Comic sans Ms", 18, ""), width=13,highlightthickness=1, highlightbackground="orange")
 entry3_f6.pack()
 
 # Create question 3
-question4_labe_f2l = tkinter.Label(fenetre6, text="3- Trouvez les données parasites pour ce problème:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question4_labe_f6 = tkinter.Label(fenetre6, text="3- Trouvez les données parasites pour ce problème:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question4_label.place(x=0, y=0, relx=0.388, rely=0.90, anchor="center")
 
 entry4_f6 = tkinter.Entry(reponse_entry4_f6, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
 entry4_f6.pack()
 
-entry5_f6 = tkinter.Entry(reponse_entry5_f6, font=("Comic sans Ms", 18, ""), width=5,highlightthickness=1, highlightbackground="orange")
-entry5_f6.pack()
+#entry5_f2 = tkinter.Entry(reponse_entry5_f2, font=("Comic sans Ms", 18, ""), width=5,highlightthickness=1, highlightbackground="orange")
+#entry5_f2.pack()
 
-entry6_f6 = tkinter.Entry(reponse_entry6_f6, font=("Comic sans Ms", 18, ""), width=5,highlightthickness=1, highlightbackground="orange")
-entry6_f6.pack()
+#entry6_f2 = tkinter.Entry(reponse_entry6_f2, font=("Comic sans Ms", 18, ""), width=5,highlightthickness=1, highlightbackground="orange")
+#entry6_f2.pack()
 
-entry7_f6 = tkinter.Entry(reponse_entry7_f6, font=("Comic sans Ms", 18, ""), width=29,highlightthickness=1, highlightbackground="orange")
-entry7_f6.pack()
+#entry7_f2 = tkinter.Entry(reponse_entry7_f2, font=("Comic sans Ms", 18, ""), width=29,highlightthickness=1, highlightbackground="orange")
+#entry7_f2.pack()
 
-entry8_f6 = tkinter.Entry(reponse_entry8_f6, font=("Comic sans Ms", 18, ""), width=10,highlightthickness=1, highlightbackground="orange")
-entry8_f6.pack()
+#entry8_f2 = tkinter.Entry(reponse_entry8_f2, font=("Comic sans Ms", 18, ""), width=10,highlightthickness=1, highlightbackground="orange")
+#entry8_f2.pack()
 
 # Create a button to check the answers
 check_button_f6 = customtkinter.CTkButton(fenetre6, text="Vérifier les réponses", font=("Comic Sans Ms", 16), command=check_answers)
 check_button_f6.place(x=1050, y=380)
 
 # Create other widgets
-label_text_f6 = tkinter.Label(fenetre6, text="Quel est le nombres d'objets vendus en janvier ? \nPour trouver la réponse complète l'égalité : \n ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-#label_text2_f2 = tkinter.Label(fenetre2, text="Chaque jour, ces animaux consomment 285 kg de nourriture. ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-
+label_text_f6 = tkinter.Label(fenetre6, text="Observe à nouveau le tableau du musée ci-dessous: \n ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 # Position other widgets
 label_text_f6.place(x=0, y=0, relx=0.34, rely=0.15, anchor="center")
 #label_text2_f2.place(x=0, y=0, relx=0.43, rely=0.56, anchor="center")
 
 
-# Association des fonctions aux boutons
-#bouton_suivant.configure(command=afficher_fenetre2)
-#bouton_precedent.configure(command=afficher_fenetre1)       
 
+#config
+# Création du bouton Suivant
+#bouton_suivant = customtkinter.CTkButton(fenetre1, text="Suivant", width=3, font=("Comic Sans Ms", 16), border_spacing=0, border_width=0)
+# Création du bouton Précédent
 # Placement des boutoF
 #bouton_suivant.pack(side=tkinter.RIGHT)
 bouton_precedent = customtkinter.CTkButton(fenetre6, text="<<", command=precedent, width=3, font=("Comic Sans Ms", 19,"bold"))
@@ -215,12 +215,14 @@ bouton_suivant.place(x=1100, y=698)
 
 #bouton de reset
 
+#bouton de reset
+
 reset_img_f6=ImageTk.PhotoImage(Image.open("reset_2.png"))
 reset_img_label_f6=tkinter.Label(fenetre6, image=reset_img_f6)
  
 # Create a button to clear the entries
-clear_button_f2 = tkinter.Button(fenetre6, command=clear_entries_f2, image=reset_img_f6, bg="white", borderwidth=0, cursor="hand2" )
-clear_button_f2.place(x=1290, y=0)
+clear_button_f6 = tkinter.Button(fenetre6, command=clear_entries_f6, image=reset_img_f6, bg="white", borderwidth=0, cursor="hand2" )
+clear_button_f6.place(x=1290, y=0)
 
 
 # Use the lift() method to bring labels to the front
@@ -231,7 +233,6 @@ mon_label_img_f6.lift()
 mon_label_img1_f6.lift()
 
 label_text_f6.lift()
-#label_text2_f2.lift()
 
 check_button_f6.lift()
 reponse_entry1_f6.lift()

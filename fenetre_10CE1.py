@@ -17,7 +17,7 @@ def center_window(window, width, height):
 
     window.geometry(f"{width}x{height}+{x_position}+{y_position}") 
 
-def clear_entries_f8():
+def clear_entries_f10():
     entry1_f10.delete(0, 'end')
     entry2_f10.delete(0, 'end')
     entry3_f10.delete(0, 'end')
@@ -75,19 +75,6 @@ def precedent():
 def suivant():
     fenetre10.destroy()
     subprocess.run(['python', 'fenetre_11CE1.py'])  
-# Create the main window   
-# Create the main window    
-
-
-def precedent():
-    fenetre10.destroy()
-    subprocess.run(['python', 'fenetre_7CE1.py'])  
-    
-def suivant():
-    fenetre10.destroy()
-    subprocess.run(['python', 'fenetre_9CE1.py'])  
-# Create the main window   
-# Create the main window    
 
 # Create the main window    
 fenetre10 =customtkinter.CTk()
@@ -103,10 +90,10 @@ img1_f10 = ImageTk.PhotoImage(Image.open("74.png"))
 
 center_window(fenetre10, window_width, window_height) #position of windows2
 # Create a Label widget and set the image as its background
-image_f10 = ImageTk.PhotoImage(Image.open("back_5.png"))
+image_f10 = ImageTk.PhotoImage(Image.open("font10.png"))
 
-img_f10 = ImageTk.PhotoImage(Image.open("max27.png"))
-img1_f10 = ImageTk.PhotoImage(Image.open("74.png"))
+#img_f12 = ImageTk.PhotoImage(Image.open("max27.png"))
+#img1_f12 = ImageTk.PhotoImage(Image.open("74.png"))
 
 mon_label_img_f10=tkinter.Label(fenetre10, image=img_f10, bg="#EAAC14")
 mon_label_img1_f10=tkinter.Label(fenetre10, image=img1_f10, bg="#EAAC14")
@@ -121,13 +108,13 @@ label_denied_f10 = tkinter.Label(fenetre10, fg='#AA2822')
 #exercise_frame.place(x=300, y=200)
 
 reponse_entry1_f10=tkinter.Label(fenetre10,text="")
-reponse_entry1_f10.place(x=758, y=427)
+reponse_entry1_f10.place(x=558, y=185)
 
 reponse_entry2_f10=tkinter.Label(fenetre10,text="")
-reponse_entry2_f10.place(x=498, y=521)
+reponse_entry2_f10.place(x=600, y=230)
 
 reponse_entry3_f10=tkinter.Label(fenetre10,text="")
-reponse_entry3_f10.place(x=699, y=605)
+reponse_entry3_f10.place(x=650, y=330)
 
 
 reponse_entry4_f10=tkinter.Label(fenetre10,text="")
@@ -138,22 +125,22 @@ reponse_entry5_f10=tkinter.Label(fenetre10,text="")
 reponse_entry5_f10.place(x=866, y=650)
 
 
-reponse_entry6_f110=tkinter.Label(fenetre10,text="")
-reponse_entry6_f110.place(x=866, y=650)
+reponse_entry6_f10=tkinter.Label(fenetre10,text="")
+reponse_entry6_f10.place(x=866, y=650)
 
 
-reponse_entry7_f110=tkinter.Label(fenetre10,text="")
-reponse_entry7_f110.place(x=530, y=570)
-reponse_entry8_f110=tkinter.Label(fenetre10,text="")
-reponse_entry8_f110.place(x=600, y=620)
+reponse_entry7_f10=tkinter.Label(fenetre10,text="")
+reponse_entry7_f10.place(x=530, y=570)
+reponse_entry8_f10=tkinter.Label(fenetre10,text="")
+reponse_entry8_f10.place(x=600, y=620)
 # Create a label with the problem statement
 #problem_label = tkinter.Label(exercise_frame, text="Votre père souhaite créer un potager sur un espace de 195 m de long dans sa concession. Pour ce faire, il achète 60 plans d’oranger, 30 plans de manguier et 40 plans d’avocatier. Il donne 2000 frs au vendeur.\\nDe retour au domicile il s'aperçoit qu'il a oublié de prendre sa différence et vous commissionne.\\nIl veut écrire le nombre total de projets en lettres mais il se trompe.", wraplength=250)
 #problem_label.pack()
 
 # Create question 1
-question1_label_f10 = tkinter.Label(fenetre10, text="1- Quelle est la distance parcourue ce jour là ?:  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question1_label_f10 = tkinter.Label(fenetre10, text="1- Donnez les coordonnées géométriques des points A, B et C sur le schéma : ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question1_label_f2 = tkinter.Label(fenetre6, text="1- Donne la dimension en longueur  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")#FDFBFB",justify="left")
-question1_label_f10.place(x=0, y=0, relx=0.36, rely=0.60, anchor="center")
+question1_label_f10.place(x=0, y=0, relx=0.41, rely=0.75, anchor="center")
 
 entry1_f10 = tkinter.Entry(reponse_entry1_f10, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
 entry1_f10.pack()
@@ -167,8 +154,8 @@ question4_label_f10 = tkinter.Label(fenetre10, text="4- Regardez les chiffres ci
 
 #question2_label.place(x=0, y=0, relx=0.385,
 # rely=0.63, anchor="center")
-question2_label_f10.place(x=0, y=0, relx=0.34, rely=0.70, anchor="center")
-question3_label_f10.place(x=0, y=0, relx=0.353, rely=0.81, anchor="center")
+#question2_label_f12.place(x=0, y=0, relx=0.34, rely=0.70, anchor="center")
+#question3_label_f12.place(x=0, y=0, relx=0.353, rely=0.81, anchor="center")
 #question4_label_f8.place(x=0, y=0, relx=0.335, rely=0.91, anchor="center")
 
 entry2_f10 = tkinter.Entry(reponse_entry2_f10, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
@@ -198,12 +185,12 @@ check_button_f10.place(x=1050, y=380)
 
 # Create other widgets
 
-label_text_f10 = tkinter.Label(fenetre10, text="Un chauffeur qui a un bus de 25 places a fait deux tours \n alert et retour sur la route de Mfou Yaoundé longue de 30 km", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+label_text_f10 = tkinter.Label(fenetre10, text="Observez la réparation ci-dessus et répondez à la question suivante :", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #label_text2_f2 = tkinter.Label(fenetre2, text="Chaque jour, ces animaux consomment 285 kg de nourriture. ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 
 # Position other widgets
-label_text_f10.place(x=0, y=0, relx=0.41, rely=0.15, anchor="center")
+label_text_f10.place(x=0, y=0, relx=0.40, rely=0.14, anchor="center")
 #label_text2_f2.place(x=0, y=0, relx=0.43, rely=0.56, anchor="center")
 
 
@@ -223,7 +210,7 @@ reset_img_f10=ImageTk.PhotoImage(Image.open("reset_2.png"))
 reset_img_label_f10=tkinter.Label(fenetre10, image=reset_img_f10)
  
 # Create a button to clear the entries
-clear_button_f10 = tkinter.Button(fenetre10, command=clear_entries_f8, image=reset_img_f10, bg="white", borderwidth=0, cursor="hand2" )
+clear_button_f10 = tkinter.Button(fenetre10, command=clear_entries_f10, image=reset_img_f10, bg="white", borderwidth=0, cursor="hand2" )
 clear_button_f10.place(x=1290, y=0)
 
 

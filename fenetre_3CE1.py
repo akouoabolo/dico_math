@@ -180,7 +180,7 @@ btn_quitter_f3 = customtkinter.CTkButton(fenetre3, text="Quitter", font=("Comic 
 # Position other widgets
 label_text_f3.place(x=0, y=0, relx=0.435, rely=0.15, anchor="center")
 #label_text2_f3.place(x=0, y=0, relx=0.41, rely=0.56, anchor="center")
-btn_quitter_f3.place(x=1050, y=680)
+#btn_quitter_f3.place(x=1050, y=680)
 
 
 # bouton suivant / précédent

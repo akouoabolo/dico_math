@@ -23,15 +23,14 @@ def check_answers():
     answer1_f1 = entry1_f1.get().strip()
     answer2_f1 = entry2_f1.get().strip()
     answer3_f1 = entry3_f1.get().strip()
-    answer4_f1 = entry4_f1.get().strip()  # Corrected line
+    answer4_f1 = entry3_f1.get().strip()
 
     if (
         answer1_f1 == "1" and
         answer2_f1 == "1" and
         answer3_f1 == "1" and
-        answer4_f1 == "1" 
+        answer4_f1 == "1"
     ):
-        # Rest of your code...
         label_acess_f1.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
         label_acess_f1.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
         mon_label_img_f1.place(x=0, y=0, relx=0.87, rely=0.72, anchor="center")
@@ -53,10 +52,19 @@ def afficher_fenetre1():
     fenetre1.deiconify() # Afficher la fenêtre principale"""
     
 # Function to clear entry fields
-
+def clear_entries():
+    entry1_f1.delete(0, 'end')
+    entry2_f1.delete(0, 'end')
+    entry3_f1.delete(0, 'end')
+    entry4_f1.delete(0, 'end')
+    
+    label_denied_f1.place_forget() # masquer les widgets sans pour autant détruire leur context!
+    mon_label_img1_f1.place_forget()        
+    label_acess_f1.place_forget() # masquer les widgets sans pour autant détruire leur context!
+    mon_label_img_f1.place_forget()  
     
     #fenêtre2
-def clear_entries_f1():
+def clear_entries_f2():
     entry1_f1.delete(0, 'end')
     entry2_f1.delete(0, 'end')
     entry3_f1.delete(0, 'end')
@@ -204,7 +212,7 @@ reset_img_f1=ImageTk.PhotoImage(Image.open("reset_1.png"))
 reset_img_label_f1=tkinter.Label(fenetre1, image=reset_img_f1)
  
 # Create a button to clear the entries
-clear_button_f1 = tkinter.Button(fenetre1, command=clear_entries_f1, image=reset_img_f1, bg="white", borderwidth=0, cursor="hand2" )
+clear_button_f1 = tkinter.Button(fenetre1, command=clear_entries, image=reset_img_f1, bg="white", borderwidth=0, cursor="hand2" )
 clear_button_f1.place(x=1290, y=0)
 
 # Use the lift() method to bring labels to the front
