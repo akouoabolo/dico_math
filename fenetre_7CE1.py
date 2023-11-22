@@ -41,7 +41,7 @@ def check_answers():
     answer2_f7 = entry2_f7.get().strip()
     answer3_f7 = entry3_f7.get().strip()
     answer4_f7 = entry4_f7.get().strip()
-    answer5_f7 = entry5_f7.get().strip()
+    #answer5_f7 = entry5_f7.get().strip()
     #answer6_f2 = entry6_f2.get().strip()
     #answer7_f2 = entry7_f2.get().strip()
     #answer8_f2 = entry7_f2.get().strip()
