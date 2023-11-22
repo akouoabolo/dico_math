@@ -45,14 +45,14 @@ def check_answers():
     answer8_f5 = entry7_f5.get().strip()
 
     if (
-        answer1_f5 == "1" and
-        answer2_f5 == "1" and
-        answer3_f5 == "1" and
-        answer4_f5 == "1" and
-        answer5_f5 == "1" and
-        answer6_f5 == "1" and
-        answer7_f5 == "1" and
-        answer8_f5 == "1" 
+        answer1_f5 == "291" and
+        answer2_f5 == "1056" and
+        answer3_f5 == "635" and
+        answer4_f5 == "324" and
+        answer5_f5 == "228" and
+        answer6_f5 == "2534" and
+        answer7_f5 == "deux cent vingt huit" and
+        answer8_f5 == "tableaux d'art" 
         
     ):
         label_acess_f5.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")

@@ -94,12 +94,12 @@ def clear_entries_f6():
 
 def precedent():
     fenetre6.destroy()
-    subprocess.run(['python', 'fenetre_6.py'])
+    subprocess.run(['python', 'fenetre_5.py'])
     
     
 def suivant():
     fenetre6.destroy()
-    subprocess.run(['python', 'fenetre_8.py'])
+    subprocess.run(['python', 'fenetre_7.py'])
 
 #------------------------------------------------------------------------------------------------------------------
 # Create the main window    

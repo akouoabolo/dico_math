@@ -46,10 +46,10 @@ def check_answers():
     #answer8_f2 = entry7_f2.get().strip()
 
     if (
-        answer1_f6 == "1" and
-        answer2_f6 == "1" and
-        answer3_f6 == "1" and
-        answer4_f6 == "1" 
+        answer1_f6 == "rectangle" and
+        answer2_f6 == "trente-cinq " and
+        answer3_f6 == "quinze" and
+        answer4_f6 == "kambouo" 
         #answer5_f2 == "1" and
         #answer6_f2 == "1" and
         #answer7_f2 == "1" and

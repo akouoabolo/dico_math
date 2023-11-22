@@ -49,13 +49,13 @@ def check_answers():
     
 
     if (
-        answer1_0f4 == "1" and
-        answer1_1f4 == "1" and
-        answer1_2f4 == "1" and
+       answer1_0f4 == "carrè" and
+        answer1_1f4 == "rectangle" and
+        answer1_2f4 == "pentagone" and
           
-        answer2_f4 == "1" and
-        answer3_f4 == "1" and
-        answer4_f4 == "1"
+        answer2_f4 == "maîs" and
+        answer3_f4 == "seau rouge" 
+       # answer4_f4 == "1"
     ):
         label_acess_f4.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
         label_acess_f4.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")

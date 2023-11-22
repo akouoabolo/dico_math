@@ -177,7 +177,7 @@ def precedent():
     
 def suivant():
     fenetre1.destroy()
-    subprocess.run(['python', 'fenetre_3.py'])  
+    subprocess.run(['python', 'fenetre_2.py'])  
     
 # close function
 def on_closing():

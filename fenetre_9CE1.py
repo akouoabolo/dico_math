@@ -47,9 +47,9 @@ def check_answers():
     #answer8_f2 = entry7_f2.get().strip()
 
     if (
-        answer1_f9 == "1" and
-        answer2_f9 == "1" and
-        answer3_f9 == "1" 
+        answer1_f9 == "120km" and
+        answer2_f9 == "100" and
+        answer3_f9 == "240km"
         #answer4_f8 == "1" 
         #answer5_f7 == "1" 
         #answer6_f2 == "1" and

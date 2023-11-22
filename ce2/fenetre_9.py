@@ -63,12 +63,12 @@ def check_answers():
 
 def precedent():
     fenetre9.destroy()
-    subprocess.run(['python', 'fenetre_7.py'])
+    subprocess.run(['python', 'fenetre_8.py'])
     
     
 def suivant():
     fenetre9.destroy()
-    subprocess.run(['python', 'fenetre_9.py'])
+    subprocess.run(['python', '0.py'])
     
     #------------------------------------------------------------------------
 # Create the main window    

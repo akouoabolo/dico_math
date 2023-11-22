@@ -47,9 +47,9 @@ def check_answers():
     #answer8_f2 = entry7_f2.get().strip()
 
     if (
-        answer1_f10 == "1" and
-        answer2_f10 == "1" and
-        answer3_f10 == "1" 
+        answer1_f10 == "(1,5)" and
+        answer2_f10 == "(2,4)" and
+        answer3_f10 == "(3,2)" 
         #answer4_f8 == "1" 
         #answer5_f7 == "1" 
         #answer6_f2 == "1" and
@@ -138,7 +138,7 @@ reponse_entry8_f10.place(x=600, y=620)
 #problem_label.pack()
 
 # Create question 1
-question1_label_f10 = tkinter.Label(fenetre10, text="1- Donnez les coordonnées géométriques des points A, B et C sur le schéma : ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question1_label_f10 = tkinter.Label(fenetre10, text="1- Donnez les coordonnées géométriques des points\n A, B et C sur le schéma : ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question1_label_f2 = tkinter.Label(fenetre6, text="1- Donne la dimension en longueur  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")#FDFBFB",justify="left")
 question1_label_f10.place(x=0, y=0, relx=0.417, rely=0.75, anchor="center")
 
@@ -185,7 +185,7 @@ check_button_f10.place(x=1050, y=380)
 
 # Create other widgets
 
-label_text_f10 = tkinter.Label(fenetre10, text="Observez la réparation ci-dessus et répondez à la question suivante :", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+label_text_f10 = tkinter.Label(fenetre10, text="Observez la réparation ci-dessus et répondez à la question \nsuivante :", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #label_text2_f2 = tkinter.Label(fenetre2, text="Chaque jour, ces animaux consomment 285 kg de nourriture. ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 

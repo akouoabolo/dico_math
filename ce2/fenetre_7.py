@@ -40,10 +40,10 @@ def check_answers():
     answer4_f7 = entry4_f7.get().strip()
 
     if (
-        answer1_f7 == "1" and
-        answer2_f7 == "1" and
-        answer3_f7 == "1" and
-        answer4_f7 == "1" 
+        answer1_f7 == "rectangle" and
+        answer2_f7 == "carré" and
+        answer3_f7 == "12cm" and
+        answer4_f7 == "18cm"    
         #answer5_f7 == "1" 
         #answer6_f2 == "1" and
         #answer7_f2 == "1" and
@@ -63,12 +63,12 @@ def check_answers():
 
 def precedent():
     fenetre7.destroy()
-    subprocess.run(['python', 'fenetre_7.py'])
+    subprocess.run(['python', 'fenetre_6.py'])
     
     
 def suivant():
     fenetre7.destroy()
-    subprocess.run(['python', 'fenetre_9.py'])
+    subprocess.run(['python', 'fenetre_8.py'])
     
     #------------------------------------------------------------------------
 # Create the main window    

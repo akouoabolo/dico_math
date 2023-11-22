@@ -101,12 +101,12 @@ def passer_au_niveau_suivant():
         question_label.config(text="Félicitations ! Vous avez terminé le jeu.")
 def precedent():
     fenetre4.destroy()
-    subprocess.run(['python', 'fenetre_4.py'])
+    subprocess.run(['python', 'fenetre_3.py'])
     
     
 def suivant():
     fenetre4.destroy()
-    subprocess.run(['python', 'fenetre_6.py'])
+    subprocess.run(['python', 'fenetre_5.py'])
     
 
 # Create the main window    

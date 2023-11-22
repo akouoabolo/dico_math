@@ -26,10 +26,11 @@ def check_answers():
     answer4_f1 = entry3_f1.get().strip()
 
     if (
-        answer1_f1 == "1" and
-        answer2_f1 == "1" and
-        answer3_f1 == "1" and
-        answer4_f1 == "1"
+        answer1_f1 == "cent-trente" and
+        answer2_f1 == "mètre" and
+        answer3_f1 == "30m" and
+        answer4_f1 == "129m"
+      
     ):
         label_acess_f1.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
         label_acess_f1.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")

@@ -47,9 +47,9 @@ def check_answers():
     #answer8_f2 = entry7_f2.get().strip()
 
     if (
-        answer1_f11 == "1" and
-        answer2_f11 == "1" and
-        answer3_f11 == "1" 
+        answer1_f11 == "34°C" and
+        answer2_f11 == "1/3" and
+        answer3_f11 == "5"  
         #answer4_f8 == "1" 
         #answer5_f7 == "1" 
         #answer6_f2 == "1" and

@@ -47,11 +47,11 @@ def check_answers():
     #answer8_f2 = entry7_f2.get().strip()
 
     if (
-        answer1_f7 == "1" and
-        answer2_f7 == "1" and
-        answer3_f7 == "1" and
-        answer4_f7 == "1" and
-        answer5_f7 == "1" 
+        
+        answer1_f7 == "123,156,345,349" and
+        answer2_f7 == "729" and
+        answer3_f7 == "530" and
+        answer4_f7 == "509" 
         #answer6_f2 == "1" and
         #answer7_f2 == "1" and
         #answer8_f2 == "1" 
@@ -151,14 +151,14 @@ entry1_f7.pack()
 # Create question 2
 #question2_label = tkinter.Label(fenetre, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question2_label_f7 = tkinter.Label(fenetre7, text="2- Saisie le résultat des opérations suivantes :\n 243x3 = \t\t 106x5 = \t\t 475+34= ",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-question3_label_f7 = tkinter.Label(fenetre7, text="3- Pour entouré le musée, Mbarga pense qu'il faut utiliser l'aire et \n Kambouo pense au périmetre. lequel des deux a raison ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left" )
+#question3_label_f7 = tkinter.Label(fenetre7, text="3- Pour entouré le musée, Mbarga pense qu'il faut utiliser l'aire et \n Kambouo pense au périmetre. lequel des deux a raison ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left" )
 #question4_label_f2 = tkinter.Label(fenetre6, text="4- Pour entouré le musée, Mbarga pense qu'il faut utiliser l'aire et \n Kambouo pense au périmetre. lequel des deux a raison?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 
 #question2_label.place(x=0, y=0, relx=0.385,
 # rely=0.63, anchor="center")
 question2_label_f7.place(x=0, y=0, relx=0.40, rely=0.73, anchor="center")
-question3_label_f7.place(x=0, y=0, relx=0.444, rely=0.87, anchor="center")
+#question3_label_f7.place(x=0, y=0, relx=0.444, rely=0.87, anchor="center")
 #question4_label_f2.place(x=0, y=0, relx=0.405, rely=0.91, anchor="center")
 
 entry2_f7 = tkinter.Entry(reponse_entry2_f7, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
@@ -176,10 +176,10 @@ question4_labe_f7 = tkinter.Label(fenetre7, text="3- Trouvez les données parasi
 
 entry4_f7 =tkinter.Entry(reponse_entry4_f7, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
 entry4_f7.pack()
-
+"""
 entry5_f7 = tkinter.Entry(reponse_entry5_f7, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
 entry5_f7.pack()
-
+"""
 #entry6_f2 = tkinter.Entry(reponse_entry6_f2, font=("Comic sans Ms", 18, ""), width=5,highlightthickness=1, highlightbackground="orange")
 #entry6_f2.pack()
 

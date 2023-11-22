@@ -40,9 +40,9 @@ def check_answers():
    
 
     if (
-        answer1_f8 == "1" and
-        answer2_f8 == "1" and
-        answer3_f8 == "1" 
+        answer1_f8 == "2/3" and
+        answer2_f8 == "4/5" and
+        answer3_f8 == "1/6"  
        # answer4_f8 == "1" 
         #answer5_f7 == "1" 
         #answer6_f2 == "1" and
@@ -68,7 +68,7 @@ def precedent():
     
 def suivant():
     fenetre8.destroy()
-    subprocess.run(['python', 'fenetre_9.py'])
+    subprocess.run(['python', '0.py'])
     
     #------------------------------------------------------------------------
 # Create the main window    

@@ -47,10 +47,10 @@ def check_answers():
     #answer8_f2 = entry7_f2.get().strip()
 
     if (
-        answer1_f12 == "1" and
-        answer2_f12 == "1" and
-        answer3_f12 == "1" and
-        answer4_f12 == "1" 
+        answer1_f12 == "100" and
+        answer2_f12 == "8:00" and
+        answer3_f12 == "18:00" and
+        answer4_f12 == "14" 
         #answer5_f7 == "1" 
         #answer6_f2 == "1" and
         #answer7_f2 == "1" and
@@ -201,7 +201,7 @@ label_text_f12 = tkinter.Label(fenetre12, text="Observez l'image, puis répondez
 btn_quitter_f12 = customtkinter.CTkButton(fenetre12, text="Quitter", font=("Comic Sans Ms", 16), command=fenetre12.destroy)
 
 # Position other widgets
-label_text_f12.place(x=0, y=0, relx=0.446, rely=0.15, anchor="center")
+label_text_f12.place(x=0, y=0, relx=0.35, rely=0.15, anchor="center")
 #label_text2_f2.place(x=0, y=0, relx=0.43, rely=0.56, anchor="center")
 #btn_quitter_f13.place(x=1050, y=680)
 

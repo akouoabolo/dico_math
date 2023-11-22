@@ -39,12 +39,10 @@ def check_answers():
     answer4_f3 = entry4_f3.get().strip()
 
     if (
-        answer1_f3 == "1" and
-        answer2_f3 == "1" and
-        answer3_f3 == "1" and
-        answer4_f3 == "1" 
-    
-        
+        answer1_f3 == "D" and
+        answer2_f3 == "B" and
+        answer3_f3 == "C" and
+        answer4_f3 == "A"      
     ):
         label_acess_f3.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
         label_acess_f3.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")
@@ -57,12 +55,12 @@ def check_answers():
         #messagebox.showerror("Essayez à nouveau", "Désolé, veuillez vérifier vos réponses et réessayer.")
 def precedent():
     fenetre3.destroy()
-    subprocess.run(['python', '1.py'])
+    subprocess.run(['python', '2.py'])
     
     
 def suivant():
     fenetre3.destroy()
-    subprocess.run(['python', 'fenetre_9.py'])
+    subprocess.run(['python', 'fenetre_4.py'])
     
 # Create the main window    
 fenetre3 =customtkinter.CTk()

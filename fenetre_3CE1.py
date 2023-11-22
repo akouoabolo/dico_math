@@ -49,14 +49,14 @@ def check_answers():
     
 
     if (
-        answer1_f3 == "1" and
+        answer1_f3 == "14cm,55cm,200cm" and
         
-        answer2_0f3 == "1" and
-        answer2_1f3 == "1" and
-        answer2_2f3 == "1" and
+        answer2_0f3 == "200cm" and
+        answer2_1f3 == "14cm" and
+        answer2_2f3 == "55cm" and
 
-        answer3_f3 == "1" and
-        answer4_f3 == "1"
+        answer3_f3 == "14,200" and
+        answer4_f3 == "100g,500g,1kg"
     ):
         label_acess_f3.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
         label_acess_f3.place(x=0, y=0, relx=0.86, rely=0.06, anchor="center")

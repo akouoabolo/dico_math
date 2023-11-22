@@ -106,12 +106,12 @@ def check_answers():
 
 def precedent():
     fenetre5.destroy()
-    subprocess.run(['python', '1.py'])
+    subprocess.run(['python', '4.py'])
     
     
 def suivant():
     fenetre5.destroy()
-    subprocess.run(['python', 'fenetre_9.py'])
+    subprocess.run(['python', 'fenetre_6.py'])
 
 #------------------------------------------------------------------------------------------------------------------
 

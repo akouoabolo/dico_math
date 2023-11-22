@@ -90,11 +90,11 @@ def clear_entries_f2():
 # Les fonctions de conversion
 def precedent():
     fenetre2.destroy()
-    subprocess.run(['python', 'fenetre_2.py'])
+    subprocess.run(['python', 'fenetre_1.py'])
     
 def suivant():
     fenetre2.destroy()
-    subprocess.run(['python', 'fenetre_4.py'])
+    subprocess.run(['python', 'fenetre_3.py'])
 
 fenetre2 =customtkinter.CTk()
 #fenetre2.iconbitmap("logo01.ico")

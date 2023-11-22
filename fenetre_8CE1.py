@@ -46,10 +46,10 @@ def check_answers():
     #answer8_f2 = entry7_f2.get().strip()
 
     if (
-        answer1_f8 == "1" and
-        answer2_f8 == "1" and
-        answer3_f8 == "1" and
-        answer4_f8 == "1" 
+        answer1_f8 == "80" and
+        answer2_f8 == "bus jaune" and
+        answer3_f8 == "96" 
+        #answer4_f8 == "1" 
         #answer5_f7 == "1" 
         #answer6_f2 == "1" and
         #answer7_f2 == "1" and
@@ -108,13 +108,13 @@ label_denied_f8 = tkinter.Label(fenetre8, fg='#AA2822')
 #exercise_frame.place(x=300, y=200)
 
 reponse_entry1_f8=tkinter.Label(fenetre8,text="")
-reponse_entry1_f8.place(x=857, y=427)
+reponse_entry1_f8.place(x=857, y=467)
 
 reponse_entry2_f8=tkinter.Label(fenetre8,text="")
-reponse_entry2_f8.place(x=480, y=521)
+reponse_entry2_f8.place(x=480, y=579)
 
 reponse_entry3_f8=tkinter.Label(fenetre8,text="")
-reponse_entry3_f8.place(x=610, y=605)
+reponse_entry3_f8.place(x=610, y=665)
 
 
 reponse_entry4_f8=tkinter.Label(fenetre8,text="")
@@ -141,7 +141,7 @@ reponse_entry8_f8.place(x=600, y=620)
 # Create question 1
 question1_label_f8 = tkinter.Label(fenetre8, text="1- Combien d'élèves les deux bus peuvent-ils accueillir ?:  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question1_label_f2 = tkinter.Label(fenetre6, text="1- Donne la dimension en longueur  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")#FDFBFB",justify="left")
-question1_label_f8.place(x=0, y=0, relx=0.399, rely=0.60, anchor="center")
+question1_label_f8.place(x=0, y=0, relx=0.399, rely=0.65, anchor="center")
 
 entry1_f8 = tkinter.Entry(reponse_entry1_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
 entry1_f8.pack()
@@ -150,14 +150,14 @@ entry1_f8.pack()
 #question2_label = tkinter.Label(fenetre, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question2_label_f8 = tkinter.Label(fenetre8, text="2- Parmi les deux bus, lequel a le double du nombre \n de sièges de l’autre ? : ",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question3_label_f8 = tkinter.Label(fenetre8, text="3- Il y a 176 élèves en CE1, combien de personnes \nrestera-t-il après le premier tour ?   ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left" )
-question4_label_f8 = tkinter.Label(fenetre8, text="4- Regardez les chiffres ci-dessus ! \nCombien d’élèves y a-t-il dans le cercle A ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+#question4_label_f8 = tkinter.Label(fenetre8, text="4- Regardez les chiffres ci-dessus ! \nCombien d’élèves y a-t-il dans le cercle A ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 
 #question2_label.place(x=0, y=0, relx=0.385,
 # rely=0.63, anchor="center")
-question2_label_f8.place(x=0, y=0, relx=0.37, rely=0.70, anchor="center")
-question3_label_f8.place(x=0, y=0, relx=0.367, rely=0.81, anchor="center")
-question4_label_f8.place(x=0, y=0, relx=0.335, rely=0.91, anchor="center")
+question2_label_f8.place(x=0, y=0, relx=0.37, rely=0.77, anchor="center")
+question3_label_f8.place(x=0, y=0, relx=0.367, rely=0.89, anchor="center")
+#question4_label_f8.place(x=0, y=0, relx=0.335, rely=0.91, anchor="center")
 entry2_f8= tkinter.Entry(reponse_entry2_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
 entry2_f8.pack()
 
@@ -171,8 +171,8 @@ entry3_f8.pack()
 question4_labe_f8 = tkinter.Label(fenetre8, text="3- Trouvez les données parasites pour ce problème:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question4_label.place(x=0, y=0, relx=0.388, rely=0.90, anchor="center")
 
-entry4_f8 = tkinter.Entry(reponse_entry4_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
-entry4_f8.pack()
+#entry4_f8 = tkinter.Entry(reponse_entry4_f8, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
+#entry4_f8.pack()
 
 #entry5_f7 = tkinter.Entry(reponse_entry5_f7, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
 #entry5_f7.pack()
