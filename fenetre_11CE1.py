@@ -47,7 +47,7 @@ def check_answers():
     #answer8_f2 = entry7_f2.get().strip()
 
     if (
-        answer1_f11 == "34°C" and
+        answer1_f11 == "36°C" and
         answer2_f11 == "1/3" and
         answer3_f11 == "5"  
         #answer4_f8 == "1" 
@@ -138,13 +138,13 @@ reponse_entry8_f11.place(x=600, y=620)
 #problem_label.pack()
 
 # Create question 1
-question1_label_f11 = tkinter.Label(fenetre11, text="1- A quelles températures les produits sont-ils stockés ?:  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question1_label_f11 = tkinter.Label(fenetre11, text="1- A quelle température les produits sont-ils stockés ?:  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question1_label_f2 = tkinter.Label(fenetre6, text="1- Donne la dimension en longueur  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")#FDFBFB",justify="left")
 question1_label_f11.place(x=0, y=0, relx=0.42, rely=0.61, anchor="center")
 
 entry1_f11 = tkinter.Entry(reponse_entry1_f11, font=("Comic sans Ms", 18, ""), width=7,highlightthickness=1, highlightbackground="orange")
 entry1_f11.pack()
-
+  
 # Create question 2
 #question2_label = tkinter.Label(fenetre, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question2_label_f11 = tkinter.Label(fenetre11, text="2- Il y a 15 cartons qui doivent être distribués à 3 centres de santé. \nÉcrivez la fraction qui représente la part de chaque \ncentre de santé ? : ",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")

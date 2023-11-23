@@ -28,7 +28,7 @@ def check_answers():
     if (
         answer1_f1 == "cent-trente" and
         answer2_f1 == "mètre" and
-        answer3_f1 == "30m" and
+        answer3_f1 == "10m" and
         answer4_f1 == "129m"
       
     ):
@@ -145,7 +145,7 @@ reponse_entry3_f1.place(x=425, y=616)
 
 
 reponse_entry4_f1=tkinter.Label(fenetre1,text="")
-reponse_entry4_f1.place(x=816, y=660)
+reponse_entry4_f1.place(x=790, y=660)
 # Create a label with the problem statement
 #problem_label = tkinter.Label(exercise_frame, text="Votre père souhaite créer un potager sur un espace de 195 m de long dans sa concession. Pour ce faire, il achète 60 plans d’oranger, 30 plans de manguier et 40 plans d’avocatier. Il donne 2000 frs au vendeur.\\nDe retour au domicile il s'aperçoit qu'il a oublié de prendre sa différence et vous commissionne.\\nIl veut écrire le nombre total de projets en lettres mais il se trompe.", wraplength=250)
 #problem_label.pack()
@@ -158,14 +158,14 @@ entry1_f1 = tkinter.Entry(reponse_entry1_f1, font=("Comic sans Ms", 18, ""), wid
 entry1_f1.pack()
 
 # Create question 2
-question2_label_f1 = tkinter.Label(fenetre1, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question2_label_f1 = tkinter.Label(fenetre1, text="2- Les orangers et les manguiers sont séparés de \n 1 dam les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question2a_label_f1 = tkinter.Label(fenetre1, text="a - Quelle unité de mesure de longueur doit-on utiliser \n pour mesurer cette distance ?",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-question2b_label_f1 = tkinter.Label(fenetre1, text="b - Trouvez la longueur qui sépare les orangers et \n les manguiers :", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question2b_label_f1 = tkinter.Label(fenetre1, text="b - Trouvez en mètre la longueur qui sépare les orangers et \n les manguiers :", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 
-question2_label_f1.place(x=0, y=0, relx=0.385, rely=0.63, anchor="center")
+question2_label_f1.place(x=0, y=0, relx=0.3838, rely=0.63, anchor="center")
 question2a_label_f1.place(x=0, y=0, relx=0.41, rely=0.72, anchor="center")
-question2b_label_f1.place(x=0, y=0, relx=0.39, rely=0.82, anchor="center")
+question2b_label_f1.place(x=0, y=0, relx=0.43, rely=0.82, anchor="center")
 
 
 entry2_f1 = tkinter.Entry(reponse_entry2_f1, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
@@ -178,8 +178,8 @@ entry3_f1 = tkinter.Entry(reponse_entry3_f1, font=("Comic sans Ms", 18, ""), wid
 entry3_f1.pack()
 
 # Create question 3
-question3_label_f1 = tkinter.Label(fenetre1, text="3- Trouvez les données parasites pour ce problème:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-question3_label_f1.place(x=0, y=0, relx=0.388, rely=0.90, anchor="center")
+question3_label_f1 = tkinter.Label(fenetre1, text="3- Trouvez la donnée parasite pour ce problème:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question3_label_f1.place(x=0, y=0, relx=0.377, rely=0.90, anchor="center")
 
 entry4_f1 = tkinter.Entry(reponse_entry4_f1, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
 entry4_f1.pack()

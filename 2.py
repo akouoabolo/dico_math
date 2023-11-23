@@ -21,7 +21,8 @@ def center_window(window, width, height):
 
 def i1():
       fenetre0.destroy()
-      subprocess.call(["python", "fenetre_7.py"])
+      subprocess.call(["python", "fenetre_12CE1.py"])
+      
 """def i2():
       fenetre0.destroy()
       subprocess.call(["python", "fenetre_9.py"])

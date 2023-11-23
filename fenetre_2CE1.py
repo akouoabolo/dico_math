@@ -42,7 +42,7 @@ def check_answers():
     
 
     if (
-        answer1_f2 == "rectangle"and
+        answer1_f2 == "le rectangle"and
         answer2_f2 == "oui" and
         answer3_f2 == "trop haut" and
         answer4_f2 == "173"

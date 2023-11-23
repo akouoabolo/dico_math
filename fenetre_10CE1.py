@@ -185,7 +185,7 @@ check_button_f10.place(x=1050, y=380)
 
 # Create other widgets
 
-label_text_f10 = tkinter.Label(fenetre10, text="Observez la réparation ci-dessus et répondez à la question \nsuivante :", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+label_text_f10 = tkinter.Label(fenetre10, text="Observez le graphe ci-dessous et répondez à la question \nsuivante :", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #label_text2_f2 = tkinter.Label(fenetre2, text="Chaque jour, ces animaux consomment 285 kg de nourriture. ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 

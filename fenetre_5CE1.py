@@ -45,12 +45,12 @@ def check_answers():
     answer8_f5 = entry7_f5.get().strip()
 
     if (
-        answer1_f5 == "291" and
-        answer2_f5 == "1056" and
-        answer3_f5 == "635" and
-        answer4_f5 == "324" and
-        answer5_f5 == "228" and
-        answer6_f5 == "2534" and
+        answer1_f5 == "33" and
+        answer2_f5 == "44" and
+        answer3_f5 == "390" and
+        answer4_f5 == "177" and
+        answer5_f5 == "70" and
+        answer6_f5 == "714" and
         answer7_f5 == "deux cent vingt huit" and
         answer8_f5 == "tableaux d'art" 
         
@@ -191,7 +191,7 @@ check_button_f5 = customtkinter.CTkButton(fenetre5, text="Vérifier les réponse
 check_button_f5.place(x=1050, y=380)
 
 # Create other widgets
-label_text_f5 = tkinter.Label(fenetre5, text="Quel est le nombres d'objets vendus en janvier ? \nPour trouver la réponse complète l'égalité : \n ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+label_text_f5 = tkinter.Label(fenetre5, text="Quel est le nombre d'objets vendus en janvier ? \nPour trouver la réponse complète l'égalité : \n ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #label_text2_f2 = tkinter.Label(fenetre2, text="Chaque jour, ces animaux consomment 285 kg de nourriture. ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 

@@ -185,7 +185,7 @@ check_button_f9.place(x=1050, y=380)
 
 # Create other widgets
 
-label_text_f9 = tkinter.Label(fenetre9, text="Un chauffeur qui a un bus de 25 places a fait deux tours \n alert et retour sur la route de Mfou Yaoundé longue de 30 km", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+label_text_f9 = tkinter.Label(fenetre9, text="Un chauffeur qui a un bus de 25 places a fait deux tours \n aller-retour sur la route de Mfou Yaoundé longue de 30 km", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #label_text2_f2 = tkinter.Label(fenetre2, text="Chaque jour, ces animaux consomment 285 kg de nourriture. ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 

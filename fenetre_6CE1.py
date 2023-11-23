@@ -46,7 +46,7 @@ def check_answers():
     #answer8_f2 = entry7_f2.get().strip()
 
     if (
-        answer1_f6 == "rectangle" and
+        answer1_f6 == "le rectangle" and
         answer2_f6 == "trente-cinq " and
         answer3_f6 == "quinze" and
         answer4_f6 == "kambouo" 
@@ -150,7 +150,7 @@ entry1_f6.pack()
 # Create question 2
 #question2_label = tkinter.Label(fenetre, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question2_label_f6 = tkinter.Label(fenetre6, text="2- Quelles sont ses dimensions en longueur et en largeur ? \n Ecris ces nombres en lettre:\n La longueur: \t\t la largeur:",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-question3_label_f6 = tkinter.Label(fenetre6, text="3- Pour entouré le musée, Mbarga pense qu'il faut utiliser l'aire et \n Kambouo pense au périmetre. lequel des deux a raison ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left" )
+question3_label_f6 = tkinter.Label(fenetre6, text="3- Pour entourer le musée, Mbarga pense qu'il faut utiliser l'aire et \n Kambouo pense au périmetre. lequel des deux a raison ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left" )
 #question4_label_f2 = tkinter.Label(fenetre6, text="4- Pour entouré le musée, Mbarga pense qu'il faut utiliser l'aire et \n Kambouo pense au périmetre. lequel des deux a raison?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 

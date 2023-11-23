@@ -47,7 +47,7 @@ def check_answers():
 
     if (
         answer1_f8 == "80" and
-        answer2_f8 == "bus jaune" and
+        answer2_f8 == "le bus jaune" and
         answer3_f8 == "96" 
         #answer4_f8 == "1" 
         #answer5_f7 == "1" 
@@ -148,7 +148,7 @@ entry1_f8.pack()
 
 # Create question 2
 #question2_label = tkinter.Label(fenetre, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-question2_label_f8 = tkinter.Label(fenetre8, text="2- Parmi les deux bus, lequel a le double du nombre \n de sièges de l’autre ? : ",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question2_label_f8 = tkinter.Label(fenetre8, text="2- Parmi les deux bus, lequel a le triple du nombre \n de sièges de l’autre ? : ",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question3_label_f8 = tkinter.Label(fenetre8, text="3- Il y a 176 élèves en CE1, combien de personnes \nrestera-t-il après le premier tour ?   ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left" )
 #question4_label_f8 = tkinter.Label(fenetre8, text="4- Regardez les chiffres ci-dessus ! \nCombien d’élèves y a-t-il dans le cercle A ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
@@ -192,7 +192,7 @@ check_button_f8.place(x=1050, y=380)
 
 # Create other widgets
 
-label_text_f8 = tkinter.Label(fenetre8, text="les élèves et les professeurs du ce1 décident de faire\n une excursion avec leurs élèves dans un zoo ! \n ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+label_text_f8 = tkinter.Label(fenetre8, text="Les enseignants des élèves du CE1 décident de faire\n une excursion avec leurs élèves dans un zoo ! \n ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #label_text2_f2 = tkinter.Label(fenetre2, text="Chaque jour, ces animaux consomment 285 kg de nourriture. ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 

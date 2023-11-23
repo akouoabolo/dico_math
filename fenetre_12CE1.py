@@ -139,7 +139,7 @@ reponse_entry8_f12.place(x=600, y=620)
 #problem_label.pack()
 
 # Create question 1
-question1_label_f12 = tkinter.Label(fenetre12, text="1- Le chauffeur du bus fait 5 tours. Combien de passagers \ndoit-il transporter ?:  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question1_label_f12 = tkinter.Label(fenetre12, text="1- Le chauffeur du bus fait 5 tours. Combien de passagers \ndevrait-il transporter ?:  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #question1_label_f2 = tkinter.Label(fenetre6, text="1- Donne la dimension en longueur  ",font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")#FDFBFB",justify="left")
 question1_label_f12.place(x=0, y=0, relx=0.435, rely=0.55, anchor="center")
 
@@ -150,7 +150,7 @@ entry1_f12.pack()
 #question2_label = tkinter.Label(fenetre, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question2_label_f12 = tkinter.Label(fenetre12, text="2- En observant les deux cadrans d'horloge indiquant les horaires \nd'ouverture et de fermeture du site, quelle est \nl'heure d'ouverture ? ",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question3_label_f12 = tkinter.Label(fenetre12, text="3- Quelle est l'heure de fermeture ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left" )
-question4_label_f12 = tkinter.Label(fenetre12, text="4- Le guide a apporté 56 bouteilles d'eau a partager avec 4 groupes \nd'enfants. Combien de bouteilles chaque groupe aura-t-il ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question4_label_f12 = tkinter.Label(fenetre12, text="4- Le guide a apporté 56 bouteilles d'eau à partager avec 4 groupes \nd'enfants. Combien de bouteilles chaque groupe aura-t-il ?", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 
 #question2_label.place(x=0, y=0, relx=0.385,

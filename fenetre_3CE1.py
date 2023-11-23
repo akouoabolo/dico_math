@@ -55,7 +55,7 @@ def check_answers():
         answer2_1f3 == "14cm" and
         answer2_2f3 == "55cm" and
 
-        answer3_f3 == "14,200" and
+        answer3_f3 == "1,2" and
         answer4_f3 == "100g,500g,1kg"
     ):
         label_acess_f3.config(text="Félicitations !!!", font=("Comic Sans Ms",20, "bold"), bg="#EAAC14")
@@ -84,7 +84,7 @@ fenetre3.resizable(width=False, height=False)
 
 center_window(fenetre3, window_width, window_height) #position of windows1
 # Create a Label widget and set the image as its background
-image_f3 = ImageTk.PhotoImage(Image.open("pub14.png"))
+image_f3 = ImageTk.PhotoImage(Image.open("font301.png"))
 
 
 img_f3 = ImageTk.PhotoImage(Image.open("max27.png"))
@@ -122,7 +122,7 @@ reponse_entry4_f3.place(x=605, y=660)
 #problem_label = tkinter.Label(exercise_frame, text="Votre père souhaite créer un potager sur un espace de 195 m de long dans sa concession. Pour ce faire, il achète 60 plans d’oranger, 30 plans de manguier et 40 plans d’avocatier. Il donne 2000 frs au vendeur.\\nDe retour au domicile il s'aperçoit qu'il a oublié de prendre sa différence et vous commissionne.\\nIl veut écrire le nombre total de projets en lettres mais il se trompe.", wraplength=250)
 #problem_label.pack()
 
-entry1_f3 = tkinter.Entry(reponse_entry1_f3, font=("Comic sans Ms", 18, ""), width=10, highlightthickness=1, highlightbackground="orange")
+entry1_f3 = tkinter.Entry(reponse_entry1_f3, font=("Comic sans Ms", 18, ""), width=12, highlightthickness=1, highlightbackground="orange")
 entry1_f3.pack()
 
 entry2_0f3 = tkinter.Entry(reponse_entry2_0f3, font=("Comic sans Ms", 18, ""), width=6, highlightthickness=1, highlightbackground="orange")
@@ -142,13 +142,13 @@ question1_label_f3.place(x=0, y=0, relx=0.54, rely=0.58, anchor="center")
 # Create question 2
 #question2_label_f3 = tkinter.Label(fenetre3, text="2- Les orangers et les manguiers sont séparés par \n 1 barrage les uns des autres." , font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question2_label_f3 = tkinter.Label(fenetre3, text="2- Compléte les dimensions sur l 'échelle.",  font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
-question3_label_f3 = tkinter.Label(fenetre3, text="3- Entre deux numéros de droites perpendiculaires \n sur l'échelle:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+question3_label_f3 = tkinter.Label(fenetre3, text="3- Entre deux numéros de droites parallèles \n sur l'échelle:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 question4_label_f3 = tkinter.Label(fenetre3, text="4- Classe les caissons selon l'ordre de grandeur:", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 
 #question2_label.place(x=0, y=0, relx=0.383, rely=0.63, anchor="center")
 question2_label_f3.place(x=0, y=0, relx=0.489, rely=0.66, anchor="center")
-question3_label_f3.place(x=0, y=0, relx=0.530, rely=0.75, anchor="center")
+question3_label_f3.place(x=0, y=0, relx=0.5, rely=0.75, anchor="center")
 question4_label_f3.place(x=0, y=0, relx=0.515, rely=0.85, anchor="center")
 
 
@@ -170,7 +170,7 @@ check_button_f3 = customtkinter.CTkButton(fenetre3, text="Vérifier les réponse
 check_button_f3.place(x=1050, y=380)
 
 # Create other widgets
-label_text_f3 = tkinter.Label(fenetre3, text="Des ouvriers du batiment ont fabriqué une échelle.\n En utilsiant 8 pièces de lattes de longueurs: \n 200cm, 55cm et 14cm. ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+label_text_f3 = tkinter.Label(fenetre3, text="Des ouvriers du batiment ont fabriqué une échelle\n en utilsiant 8 pièces de lattes de longueurs: \n 200cm, 55cm et 14cm. ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 #label_text2_f3 = tkinter.Label(fenetre3, text="Chaque jour, ces animaux consomment 285 kg de nourriture. ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 #btn_nouvel_info = customtkinter.CTkButton(fenetre, text="Afficher une nouvelle info", font=("Comic Sans Ms", 24))
@@ -178,7 +178,7 @@ label_text_f3 = tkinter.Label(fenetre3, text="Des ouvriers du batiment ont fabri
 btn_quitter_f3 = customtkinter.CTkButton(fenetre3, text="Quitter", font=("Comic Sans Ms", 16), command=fenetre3.destroy)
 
 # Position other widgets
-label_text_f3.place(x=0, y=0, relx=0.435, rely=0.15, anchor="center")
+label_text_f3.place(x=0, y=0, relx=0.40, rely=0.15, anchor="center")
 #label_text2_f3.place(x=0, y=0, relx=0.41, rely=0.56, anchor="center")
 #btn_quitter_f3.place(x=1050, y=680)
 

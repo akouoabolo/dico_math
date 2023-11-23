@@ -202,7 +202,7 @@ label_text_f7 = tkinter.Label(fenetre7, text="Classe les nombres suivant \n en l
 btn_quitter_f7 = customtkinter.CTkButton(fenetre7, text="Quitter", font=("Comic Sans Ms", 16), command=fenetre7.destroy)
 
 # Position other widgets
-label_text_f7.place(x=0, y=0, relx=0.46, rely=0.15, anchor="center")
+label_text_f7.place(x=0, y=0, relx=0.43, rely=0.15, anchor="center")
 
 
 #config
