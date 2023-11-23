@@ -178,7 +178,7 @@ check_button_f4.place(x=1050, y=380)
 
 # Create other widgets
 
-label_text_f4 = tkinter.Label(fenetre4, text="Trouve le chiffre manquant dans la suite de nombres ! ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+label_text_f4 = tkinter.Label(fenetre4, text="Trouve le chiffre manquant dans la suite des nombres ! ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 niveau = 1
 

@@ -43,7 +43,7 @@ def check_answers():
         answer1_f7 == "rectangle" and
         answer2_f7 == "carré" and
         answer3_f7 == "12cm" and
-        answer4_f7 == "18cm"    
+        answer4_f7 == "8cm"    
         #answer5_f7 == "1" 
         #answer6_f2 == "1" and
         #answer7_f2 == "1" and
@@ -149,7 +149,7 @@ check_button_f7.place(x=1050, y=380)
 
 # Create other widgets
 
-label_text_f7 = tkinter.Label(fenetre7, text="Observe les figures ci-dessous et répond au questionnaire\n . ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
+label_text_f7 = tkinter.Label(fenetre7, text="Observe les figures ci-dessous et répond au questionnaire.\n ", font=("Comic sans Ms", 18, ""),bg="#FDFBFB",justify="left")
 
 #btn_quitter_f7 = customtkinter.CTkButton(fenetre7, text="Quitter", font=("Comic Sans Ms", 16), command=fenetre7.destroy)
 
