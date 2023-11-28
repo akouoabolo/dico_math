@@ -55,7 +55,7 @@ def check_answers():
         #messagebox.showerror("Essayez à nouveau", "Désolé, veuillez vérifier vos réponses et réessayer.")
 def precedent():
     fenetre3.destroy()
-    subprocess.run(['python', '2.py'])
+    subprocess.run(['python', 'fenetre_2.py'])
     
     
 def suivant():

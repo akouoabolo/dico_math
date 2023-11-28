@@ -173,7 +173,7 @@ def clear_entries_f1():
 # fonctions de précédent() et suivant()
 def precedent():
     fenetre1.destroy()
-    subprocess.run(['python', 'fenetre_1.py'])  
+    subprocess.run(['python', '0.py'])  
     
 def suivant():
     fenetre1.destroy()
